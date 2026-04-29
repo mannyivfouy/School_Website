@@ -1,5 +1,14 @@
 {
-  "home" : "Home",
-  "about_us" : "About Us",
-  "contact_us" : "Contact Us"
+  "NAV": {
+    "INSTITUTE": "SETEC INSTITUTE",
+    "SLOGAN_1": "Begin Your Education With Us,",
+    "SLOGAN_2": "End With Job Opportunity",
+    "HOME": "Home",
+    "ABOUT_US": "About Us",
+    "CONTACT_US": "Contact Us",
+    "ACADEMIC" : "Academic",
+    "INTERNSHIP" : "Internship",
+    "FACILITIES" : "Facilities",
+    "STRUCTURE" : "Structure"
+  }
 }

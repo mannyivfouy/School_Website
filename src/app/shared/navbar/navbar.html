@@ -1,1 +1,86 @@
-<p style="background-color: rebeccapurple;">navbar works!</p>
+<nav class="bg-white shadow-md fixed w-full top-0 z-50" [class.font-khmer]>
+  <div class="max-w-screen-2xl mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- Logo -->
+    <div routerLink="/layout/home" class="logo">
+      <div class="flex items-center">
+        <img src="assets/images/logo.png" alt="logo" width="70" class="mr-5" />
+        <div class="flex flex-col justify-center">
+          <div class="text-2xl font-bold text-blue-600">
+            {{ 'NAV.INSTITUTE' | translate }}
+          </div>
+          <small class="text-gray-500 text-sm leading-tight">{{
+            'NAV.SLOGAN_1' | translate
+          }}</small>
+          <small class="text-gray-500 text-sm leading-tight">{{
+            'NAV.SLOGAN_2' | translate
+          }}</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu -->
+    <ul class="md:flex space-x-6 text-gray-700 font-medium text-lg">
+      <li>
+        <a routerLink="/layout/home" class="nav-link" routerLinkActive="active">
+          {{ 'NAV.HOME' | translate }}
+        </a>
+      </li>
+      <li>
+        <a routerLink="/layout/about" class="nav-link" routerLinkActive="active">
+          {{ 'NAV.ABOUT_US' | translate }}
+        </a>
+      </li>
+      <li>
+        <a routerLink="/layout/contact" class="nav-link" routerLinkActive="active">
+          {{ 'NAV.CONTACT_US' | translate }}</a
+        >
+      </li>
+      <li>
+        <a href="" class="nav-link" routerLinkActive="active">
+          {{ 'NAV.ACADEMIC' | translate }}
+        </a>
+      </li>
+      <li>
+        <a href="" class="nav-link" routerLinkActive="active">
+          {{ 'NAV.INTERNSHIP' | translate }}
+        </a>
+      </li>
+      <li>
+        <a href="" class="nav-link" routerLinkActive="active">
+          {{ 'NAV.FACILITIES' | translate }}
+        </a>
+      </li>
+      <li>
+        <a href="" class="nav-link" routerLinkActive="active">
+          {{ 'NAV.STRUCTURE' | translate }}
+        </a>
+      </li>
+    </ul>
+
+    <!-- Right side -->
+    <div class="flex items-center space-x-3">
+      <!-- Language Switch -->
+      <div class="flex bg-gray-100 rounded-lg p-1">
+        <button
+          (click)="changeLang('en')"
+          class="px-3 py-1 rounded-md text-sm hover:bg-[#00A76D] hover:text-white transition"
+        >
+          <div class="flex items-center">
+            <img src="assets/icons/usFlag.png" alt="usFlag" width="30" />
+            <p class="ml-2">EN</p>
+          </div>
+        </button>
+
+        <button
+          (click)="changeLang('kh')"
+          class="px-3 py-1 rounded-md text-sm hover:bg-[#00A76D] hover:text-white transition"
+        >
+          <div class="flex items-center">
+            <img src="assets/icons/khFlag.png" alt="usFlag" width="30" />
+            <p class="ml-2">KH</p>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
