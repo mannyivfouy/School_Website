@@ -7,7 +7,8 @@ import { TranslateService } from '@ngx-translate/core';
 export class Language {
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang('en');
-    this.setLanguage('en');
+    const savedLang = localStorage.getItem('lang') || 'en';
+    this.setLanguage(savedLang);
   }
 
   setLanguage(lang: string) {
@@ -20,5 +21,7 @@ export class Language {
       document.body.classList.remove('khmer');
       document.body.classList.add('english');
     }
+
+    localStorage.setItem('lang', lang);
   }
 }

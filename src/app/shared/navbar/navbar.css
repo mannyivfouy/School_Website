@@ -1,0 +1,44 @@
+.text-2xl {
+  color: #00a76d;
+}
+
+.logo {
+  cursor: pointer;
+  color: #00a76d;
+}
+
+.nav-link {
+  position: relative;
+  color: #374151;
+  text-decoration: none;
+  transition: color 0.5s ease;
+  padding-bottom: 4px;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #00a76d;
+  transition: width 0.5s ease;
+}
+
+.nav-link:hover {
+  color: #00a76d;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #00a76d;
+  font-weight: bold;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
