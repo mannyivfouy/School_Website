@@ -14,11 +14,11 @@ export class Language {
     this.translate.use(lang);
 
     if (lang === 'kh') {
-      document.body.className = 'khmer';
+      document.body.classList.remove('english');
+      document.body.classList.add('khmer');
     } else {
-      document.body.className = 'english';
+      document.body.classList.remove('khmer');
+      document.body.classList.add('english');
     }
-
-    localStorage.setItem('lang', lang);
   }
 }

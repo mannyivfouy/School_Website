@@ -1,1 +1,38 @@
-<p style="background-color: rebeccapurple;">navbar works!</p>
+<nav class="bg-white shadow-md fixed w-full top-0 z-50" [class.font-khmer]>
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="text-xl font-bold text-blue-600">Institute</div>
+
+    <!-- Menu -->
+    <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+      <li><a href="#" class="hover:text-blue-600">{{'HOME' | translate}}</a></li>
+      <li><a href="#" class="hover:text-blue-600">About</a></li>
+      <li><a href="#" class="hover:text-blue-600">Majors</a></li>
+      <li><a href="#" class="hover:text-blue-600">News</a></li>
+      <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+    </ul>
+
+    <!-- Right side -->
+    <div class="flex items-center space-x-3">
+      <!-- Language Switch -->
+      <div class="flex bg-gray-100 rounded-lg p-1">
+        <button
+          (click)="changeLang('en')"
+          class="px-3 py-1 rounded-md text-sm hover:bg-blue-500 hover:text-white transition"
+        >
+          EN
+        </button>
+
+        <button
+          (click)="changeLang('kh')"
+          class="px-3 py-1 rounded-md text-sm hover:bg-blue-500 hover:text-white transition"
+        >
+          KH
+        </button>
+      </div>
+
+      <!-- Mobile button -->
+      <button class="md:hidden text-gray-700 text-2xl">☰</button>
+    </div>
+  </div>
+</nav>
