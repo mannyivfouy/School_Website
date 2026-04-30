@@ -18,15 +18,15 @@ export const routes: Routes = [
       },
       {
         path: 'home',
-        loadComponent: () => import('./pages/home/home').then((m) => m.Home),
+        loadComponent: () => import('./features/home/home').then((m) => m.Home),
       },
       {
         path: 'about',
-        loadComponent: () => import('./pages/about/about').then((m) => m.About),
+        loadComponent: () => import('./features/about/about').then((m) => m.About),
       },
       {
         path: 'contact',
-        loadComponent: () => import('./pages/contact/contact').then((m) => m.Contact),
+        loadComponent: () => import('./features/contact/contact').then((m) => m.Contact),
       },
     ],
   },
