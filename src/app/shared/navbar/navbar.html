@@ -1,4 +1,4 @@
-<nav class="bg-white shadow-md fixed w-full top-0 z-50" [class.font-khmer]>
+<nav class="bg-white shadow-md sticky w-full top-0 z-50" [class.font-khmer]>
   <div class="max-w-screen-2xl mx-auto px-4 py-3 flex items-center justify-between">
     <!-- Logo -->
     <div routerLink="/layout/home" class="logo">
@@ -8,12 +8,12 @@
           <div class="text-2xl font-bold text-blue-600">
             {{ 'NAV.INSTITUTE' | translate }}
           </div>
-          <small class="text-gray-500 text-sm leading-tight">{{
-            'NAV.SLOGAN_1' | translate
-          }}</small>
-          <small class="text-gray-500 text-sm leading-tight">{{
-            'NAV.SLOGAN_2' | translate
-          }}</small>
+          <small class="text-gray-500 text-sm leading-tight">
+            <i> {{ 'NAV.SLOGAN_1' | translate }}</i>
+          </small>
+          <small class="text-gray-500 text-sm leading-tight">
+            <i> {{ 'NAV.SLOGAN_2' | translate }}</i>
+          </small>
         </div>
       </div>
     </div>
@@ -58,29 +58,24 @@
     </ul>
 
     <!-- Right side -->
-    <div class="flex items-center space-x-3">
-      <!-- Language Switch -->
-      <div class="flex bg-gray-100 rounded-lg p-1">
-        <button
-          (click)="changeLang('en')"
-          class="px-3 py-1 rounded-md text-sm hover:bg-[#00A76D] hover:text-white transition"
-        >
-          <div class="flex items-center">
-            <img src="assets/icons/usFlag.png" alt="usFlag" width="30" />
-            <p class="ml-2">EN</p>
-          </div>
-        </button>
+    <div class="flex items-center gap-2">
+      <button
+        (click)="changeLang('en')"
+        [class.active-lang]="currentLang === 'en'"
+        class="lang-btn"
+      >
+        <img src="assets/icons/usFlag.png" alt="EN" width="20" class="rounded-sm" />
+        <span>EN</span>
+      </button>
 
-        <button
-          (click)="changeLang('kh')"
-          class="px-3 py-1 rounded-md text-sm hover:bg-[#00A76D] hover:text-white transition"
-        >
-          <div class="flex items-center">
-            <img src="assets/icons/khFlag.png" alt="usFlag" width="30" />
-            <p class="ml-2">KH</p>
-          </div>
-        </button>
-      </div>
+      <button
+        (click)="changeLang('kh')"
+        [class.active-lang]="currentLang === 'kh'"
+        class="lang-btn"
+      >
+        <img src="assets/icons/khFlag.png" alt="KH" width="20" class="rounded-sm" />
+        <span>KH</span>
+      </button>
     </div>
   </div>
 </nav>

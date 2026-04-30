@@ -22,6 +22,14 @@ export class Language {
       document.body.classList.add('english');
     }
 
+    const content = document.getElementById('main-content');
+
+    if (content) {
+      content.classList.remove('animate__animated', 'animate__fadeIn', 'animate__slow');
+      void content.offsetWidth;
+      content.classList.add('animate__animated', 'animate__fadeIn', 'animate__slow');
+    }
+
     localStorage.setItem('lang', lang);
   }
 }
