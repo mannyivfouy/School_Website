@@ -10,5 +10,10 @@
     "INTERNSHIP" : "កម្មសិក្សា",
     "FACILITIES" : "សម្ភារៈបរិក្ខា",
     "STRUCTURE" : "រចនាសម្ព័ន្ធ"
+  },
+
+  "CONTACT" : {
+    "OUR_LOCATION" : "ទីតាំងរបស់យើង",
+    "CONTACT_DETAIL" : "ព័ត៍មានលំអិតនៃទំនាក់ទំនង"
   }
 }

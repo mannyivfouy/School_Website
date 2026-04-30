@@ -10,5 +10,10 @@
     "INTERNSHIP" : "Internship",
     "FACILITIES" : "Facilities",
     "STRUCTURE" : "Structure"
+  },
+
+  "CONTACT" : {
+    "OUR_LOCATION" : "Our Location",
+    "CONTACT_DETAIL" : "Contact Detail"
   }
 }
