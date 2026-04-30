@@ -42,3 +42,28 @@
 .nav-link.active::after {
   width: 100%;
 }
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: transparent;
+  color: #6b7280;
+  border: 1.5px solid #d1d5db;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  border-color: #00a76d;
+  color: #00a76d;
+}
+
+.active-lang {
+  background: #00a76d !important;
+  color: white !important;
+  border-color: #00a76d !important;
+}

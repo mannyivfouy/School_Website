@@ -10,10 +10,13 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
-export class Navbar{
+export class Navbar {
+  currentLang: string = localStorage.getItem('lang') || 'en';
+
   constructor(private langService: Language) {}
 
   changeLang(lang: string) {
+    this.currentLang = lang;
     this.langService.setLanguage(lang);
   }
 }

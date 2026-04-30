@@ -1,12 +1,12 @@
+
 /* You can add global styles to this file, and also import other style files */
-
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;700&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 
-body.english{
+body.english {
   font-family: 'Inter', sans-serif;
 }
 
-body.khmer{
-  font-family: 'Noto Sans Khmer', sans-serif;
+body.khmer {
+  font-family: 'Kantumruy Pro', sans-serif;
 }
