@@ -6,18 +6,36 @@
     "HOME": "Home",
     "ABOUT_US": "About Us",
     "CONTACT_US": "Contact Us",
-    "ACADEMIC" : "Academics",
-    "INTERNSHIP" : "Internship",
-    "FACILITIES" : "Facilities",
-    "STRUCTURE" : "Structure"
+    "ACADEMIC": "Academics",
+    "INTERNSHIP": "Internship",
+    "FACILITIES": "Facilities",
+    "STRUCTURE": "Structure"
   },
-
-  "CONTACT" : {
-    "OUR_LOCATION" : "Our Location",
-    "CONTACT_DETAIL" : "Contact Detail",
-    "LOCATION" : "Location",
-    "PHONE" : "Phone",
-    "EMAIL" : "Email",
-    "SOCIAL_MEDIA" : "Social Media"
+  "CONTACT": {
+    "OUR_LOCATION": "Our Location",
+    "CONTACT_DETAIL": "Contact Detail",
+    "LOCATION": "Location",
+    "PHONE": "Phone",
+    "EMAIL": "Email",
+    "SOCIAL_MEDIA": "Social Media"
+  },
+  "ABOUT": {
+    "VISION": {
+      "TITLE": "Vision",
+      "DESCRIPTION": "SETEC INSTITUTE continues to become a leading private establishment in providing tertiary education in Management Information System, Design, and Business Information System in Cambodia and promote quality in education, management, researches and services to an international standard."
+    },
+    "MISSION": {
+      "TITLE": "Mission",
+      "DESCRIPTION": "In order to achieve its vision, SETEC INSTITUTE educates and trains students attain quality of knowledge and ethical values. This will assist them in grasping the job opportunity. To this end SETEC INSTITUTE focuses on staff and teacher development, and student services, curriculum modernization and facility improvement."
+    },
+    "GOAL": {
+      "TITLE": "Goal",
+      "DESCRIPTION": "To achieve its mission in line with the above, SETEC INSTITUTE is committed to attaining five keys objectives : ",
+      "NO1" : "1. To promote quality of curriculum development so as to respond to Cambodia educational policy as well as national and international market.",
+      "NO2" : "2. To continue to enhance quality of tertiary education.",
+      "NO3" : "3. To promote infrastructure and facility.",
+      "NO4" : "4. To promote staff and teacher development.",
+      "NO5" : "5. To strengthen student services to ensure that students achieve success in their study and innovation."
+    }
   }
 }
