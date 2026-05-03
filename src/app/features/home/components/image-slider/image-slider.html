@@ -1,0 +1,33 @@
+<div class="relative w-full h-[600px] overflow-hidden">
+
+  <div
+    *ngFor="let img of images; let i = index"
+    class="absolute inset-0 bg-center bg-cover transition-opacity duration-1000 ease-in-out"
+    [style.backgroundImage]="'url(' + img + ')'"
+    [style.backgroundPosition]="'center'"
+    [class.opacity-100]="i === currentIndex"
+    [class.opacity-0]="i !== currentIndex"
+  ></div>
+
+  <!-- DARK OVERLAY -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- TEXT CONTENT -->
+  <div class="relative z-10 flex items-center h-full px-10 md:px-20 text-white">
+    <div class="max-w-xl text-left space-y-4">
+      <h1 class="text-4xl md:text-6xl font-bold">Student Graduation</h1>
+
+      <p class="text-lg md:text-xl text-white/90">2024 Ceremony Celebration</p>
+    </div>
+  </div>
+
+  <!-- DOT NAVIGATION -->
+  <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+    <span
+      *ngFor="let img of images; let i = index"
+      (click)="goToSlide(i)"
+      class="w-2.5 h-2.5 rounded-full cursor-pointer transition-all duration-300"
+      [ngClass]="i === currentIndex ? 'bg-[#00a76d]' : 'bg-white/40'"
+    ></span>
+  </div>
+</div>
