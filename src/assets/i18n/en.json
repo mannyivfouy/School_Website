@@ -22,7 +22,7 @@
   "ABOUT": {
     "VISION": {
       "TITLE": "Vision",
-      "DESCRIPTION": "SETEC INSTITUTE continues to become a leading private establishment in providing tertiary education in Management Information System, Design, and Business Information System in Cambodia and promote quality in education, management, researches and services to an international standard."
+      "DESCRIPTION": "SETEC INSTITUTE continues to become a leading private establishment in providing tertiary education in Management Information System, Design, and Business Information Technology in Cambodia and promote quality in education, management, researches and services to an international standard."
     },
     "MISSION": {
       "TITLE": "Mission",
@@ -31,11 +31,24 @@
     "GOAL": {
       "TITLE": "Goal",
       "DESCRIPTION": "To achieve its mission in line with the above, SETEC INSTITUTE is committed to attaining five keys objectives : ",
-      "NO1" : "1. To promote quality of curriculum development so as to respond to Cambodia educational policy as well as national and international market.",
-      "NO2" : "2. To continue to enhance quality of tertiary education.",
-      "NO3" : "3. To promote infrastructure and facility.",
-      "NO4" : "4. To promote staff and teacher development.",
-      "NO5" : "5. To strengthen student services to ensure that students achieve success in their study and innovation."
+      "NO1": "1. To promote quality of curriculum development so as to respond to Cambodia educational policy as well as national and international market.",
+      "NO2": "2. To continue to enhance quality of tertiary education.",
+      "NO3": "3. To promote infrastructure and facility.",
+      "NO4": "4. To promote staff and teacher development.",
+      "NO5": "5. To strengthen student services to ensure that students achieve success in their study and innovation."
     }
+  },
+  "WELCOME": {
+    "WELCOME": "WELCOME TO SETEC INSTITUTE",
+    "MESSAGE_FROM": "MESSAGE FROM DIRECTOR",
+    "MESSAGE_P1": "Message from the director from behalf of SETEC INSTITUTE, I am pleased to inform all that SETEC is a tertiary educational establishment that specific on Management Information System, Design, and Business Information Technology. SETEC INSTITUTE is located along the Russian Federation Boulevard, an area that is recognized by the public that provide tertiary education.",
+    "MESSAGE_P2": "We believe that a good learning environment is important for out students and therefore we have equipped all our classrooms with the necessary such as air-conditioners, LCD projectors and many other. To Following the latest trend, our library is focus more on e-books and video trainings. Our lectures are qualified with years of teaching experience.",
+    "MESSAGE_P3": "Inside SETEC INSTITUTE, we have the relevant departments to service our students form fees, attendance, exams to any related student welfare. Our objective is to find jobs for students when they graduated and so therefore we have an Internship department. This department will place our final year students in companies, organization(Government or Non-Government) and various institutions in accordance with their talents and subjects for study.",
+    "MESSAGE_P4": "Our success rate of students finding a job by themselves or by the Internship department is about 80% and above. This is really in line with our slogan: 'Begin Your Education With Us, End With Job Opportunities'",
+    "MESSAGE_P5": "SETEC INSTITUTE is registered with the Ministry of Education, Youth and Sports and is recognized by the Accreditation Committee of Cambodia. In order to groom future Leaders and fulfilling the workforce needed in Cambodia, we are committed by focus on :",
+    "COMMIT_1": "1. Developing and updating curriculum based on market demand.",
+    "COMMIT_2": "2. Sourcing and getting the latest technology available for classrooms usage.",
+    "COMMIT_3": "3. Selective where lectures are concerned so as to make sure that all students that are graduated from here are above their peers.",
+    "MESSAGE_P6": "Finally, we are making sure that educational quality here in SETEC INSTITUTE will be on par with that of other developed countries and I would like to take this opportunity to wish all ladies and gentlemen and all students, are prosperity and bright future."
   }
 }
