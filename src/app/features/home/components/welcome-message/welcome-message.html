@@ -1,0 +1,96 @@
+<section class="w-full pt-8">
+  <div class="w-full flex flex-col lg:flex-row items-start gap-10">
+    <div class="w-full lg:w-1/5 flex justify-start">
+      <div
+        class="border-4 border-[#00a76d] rounded-xl overflow-hidden card-shadow shadow-lg w-full max-w-sm"
+      >
+        <img
+          src="assets/images/logo.png"
+          alt="School Image"
+          class="w-full h-[420px] object-contain p-8"
+        />
+      </div>
+    </div>
+
+    <!-- RIGHT: MESSAGE (bigger width) -->
+    <div class="w-full lg:w-4/5">
+      <h2 class="text-lg font-bold text-[#00a76d]">
+        {{ 'WELCOME.WELCOME' | translate }}
+      </h2>
+
+      <h2 class="text-2xl font-bold text-black mb-4">
+        {{ 'WELCOME.MESSAGE_FROM' | translate }}
+      </h2>
+
+      <p class="text-gray-600 text-lg leading-relaxed mb-4 text-justify">
+        {{ 'WELCOME.MESSAGE_P1' | translate }}
+      </p>
+
+      <p class="text-gray-600 text-lg leading-relaxed mb-4 text-justify">
+        {{ 'WELCOME.MESSAGE_P2' | translate }}
+      </p>
+
+      <div
+        class="grid transition-[grid-template-rows]duration-500 ease-in-out"
+        [class.grid-rows-[0fr]]="!isExpanded"
+        [class.grid-rows-[1fr]]="isExpanded"
+      >
+        <div class="overflow-hidden">
+          <p class="text-gray-600 text-lg leading-relaxed mb-4 text-justify">
+            {{ 'WELCOME.MESSAGE_P3' | translate }}
+          </p>
+
+          <p class="text-gray-600 text-lg leading-relaxed mb-4 text-justify">
+            {{ 'WELCOME.MESSAGE_P4' | translate }}
+          </p>
+
+          <p class="text-gray-600 text-lg leading-relaxed text-justify">
+            {{ 'WELCOME.MESSAGE_P5' | translate }}
+          </p>
+
+          <p class="text-gray-600 text-lg leading-relaxed ml-5">
+            {{ 'WELCOME.COMMIT_1' | translate }}
+          </p>
+
+          <p class="text-gray-600 text-lg leading-relaxed ml-5">
+            {{ 'WELCOME.COMMIT_2' | translate }}
+          </p>
+
+          <p class="text-gray-600 text-lg leading-relaxed mb-4 ml-5">
+            {{ 'WELCOME.COMMIT_3' | translate }}
+          </p>
+
+          <p class="text-gray-600 text-lg leading-relaxed mb-4 text-justify">
+            {{ 'WELCOME.MESSAGE_P6' | translate }}
+          </p>
+        </div>
+      </div>
+
+      <button
+        (click)="toggle()"
+        class="mt-4 flex items-center gap-2 text-[#00a76d] font-medium hover:underline transition"
+      >
+        <span>
+          {{ isExpanded ? 'Show less' : 'Read full message' }}
+        </span>
+
+        <!-- SVG ICON -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#00a76d"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="transition-transform duration-300"
+          [class.rotate-180]="isExpanded"
+        >
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
