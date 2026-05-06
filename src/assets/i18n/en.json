@@ -50,5 +50,21 @@
     "COMMIT_2": "2. Sourcing and getting the latest technology available for classrooms usage.",
     "COMMIT_3": "3. Selective where lectures are concerned so as to make sure that all students that are graduated from here are above their peers.",
     "MESSAGE_P6": "Finally, we are making sure that educational quality here in SETEC INSTITUTE will be on par with that of other developed countries and I would like to take this opportunity to wish all ladies and gentlemen and all students, are prosperity and bright future."
+  },
+  "FOOTER": {
+    "ABOUT": {
+      "TITLE": "About SETEC",
+      "DESCRIPTION": "SETEC INSTITUTE is a leading private institution providing tertiary education in Cambodia."
+    },
+    "QUICK": {
+      "TITLE": "Quick Links"
+    },
+    "CONTACT": {
+      "TITLE": "Contact"
+    },
+    "CONNECT": {
+      "TITLE": "Connect With Us",
+      "DESCRIPTION": "Stay updated with our latest news "
+    }
   }
 }
