@@ -57,7 +57,10 @@
       "DESCRIPTION": "SETEC INSTITUTE is a leading private institution providing tertiary education in Cambodia."
     },
     "QUICK": {
-      "TITLE": "Quick Links"
+      "TITLE": "Quick Links",
+      "ABOUT_US": "About Us",
+      "CONTACT_US": "Contact Us",
+      "ACADEMIC": "Academics"
     },
     "CONTACT": {
       "TITLE": "Contact"
