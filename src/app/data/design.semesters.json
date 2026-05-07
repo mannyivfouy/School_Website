@@ -1,0 +1,94 @@
+{
+  "associate": [
+    {
+      "year": 1,
+      "semester": 1,
+      "subjects": [
+        {
+          "code": "FD",
+          "name": "Fundamental Drawing"
+        },
+        {
+          "code": "DC",
+          "name": "Design Color"
+        },
+        {
+          "code": "MGT I",
+          "name": "Principle of Management I"
+        },
+        {
+          "code": "BM",
+          "name": "Business Mathematics"
+        },
+        {
+          "code": "FDI I",
+          "name": "Fundamental Digital Imaging I"
+        },
+        {
+          "code": "OA I",
+          "name": "Office Applications I"
+        }
+      ]
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "subjects": [
+        {
+          "code": "D I",
+          "name": "Drawing I"
+        },
+        {
+          "code": "DC I",
+          "name": "Design Communication I"
+        },
+        {
+          "code": "MGT II",
+          "name": "Principle of Management II"
+        },
+        {
+          "code": "CC",
+          "name": "Culture & Civilization"
+        },
+        {
+          "code": "DI I",
+          "name": "Digital Imaging I"
+        },
+        {
+          "code": "OA II",
+          "name": "Office Applications II"
+        }
+      ]
+    },
+    {
+      "year": 2,
+      "semester": 1,
+      "subjects": [
+        {
+          "code": "D II",
+          "name": "Drawing II"
+        },
+        {
+          "code": "DDP",
+          "name": "Design Definition & Process"
+        },
+        {
+          "code": "MM I",
+          "name": "Model Making I"
+        },
+        {
+          "code": "PR",
+          "name": "Public Relations"
+        },
+        {
+          "code": "FDI II",
+          "name": "Fundamental Digital Imaging I"
+        },
+        {
+          "code": "ENG 1",
+          "name": "English L1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "associate": [
+    {
+      "year": 1,
+      "semester": 1,
+      "subjects": [
+        {
+          "code": "HIS",
+          "name": "History"
+        },
+        {
+          "code": "CM I",
+          "name": "Computer Mathematics I"
+        },
+        {
+          "code": "MGT I",
+          "name": "Principle of Management I"
+        },
+        {
+          "code": "DS I",
+          "name": "Data Structure I"
+        },
+        {
+          "code": "FGD I",
+          "name": "Fundamental Graphic Design I"
+        },
+        {
+          "code": "OA I",
+          "name": "Office Applications I"
+        }
+      ]
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "subjects": [
+        {
+          "code": "CC",
+          "name": "Culture & Civilization"
+        },
+        {
+          "code": "CM II",
+          "name": "Computer Mathematics II"
+        },
+        {
+          "code": "MGT II",
+          "name": "Principle of Management II"
+        },
+        {
+          "code": "DS II",
+          "name": "Data Structure II"
+        },
+        {
+          "code": "GD I",
+          "name": "Graphic Design I"
+        },
+        {
+          "code": "OA II",
+          "name": "Office Applications II"
+        }
+      ]
+    },
+    {
+      "year": 2,
+      "semester": 1,
+      "subjects": [
+        {
+          "code": "A+ I",
+          "name": "A+ (Computer Maintenance & Repair) I"
+        },
+        {
+          "code": "C++",
+          "name": "C++ Programming"
+        },
+        {
+          "code": "PR",
+          "name": "Public Relations"
+        },
+        {
+          "code": "BK",
+          "name": "Book Keeping"
+        },
+        {
+          "code": "FGD II",
+          "name": "Fundamental Graphic Design II"
+        },
+        {
+          "code": "ENG 1",
+          "name": "English L1"
+        }
+      ]
+    },
+    {
+      "year": 2,
+      "semester": 2,
+      "subjects": [
+        {
+          "code": "A+ II",
+          "name": "A+ (Computer Maintenance & Repair) II"
+        },
+        {
+          "code": "C# I",
+          "name": "C# Programming I"
+        },
+        {
+          "code": "WD I",
+          "name": "Web Development I"
+        },
+        {
+          "code": "AC",
+          "name": "Accounting"
+        },
+        {
+          "code": "GD II",
+          "name": "Graphic Design II"
+        },
+        {
+          "code": "ENG 2",
+          "name": "English L2"
+        }
+      ]
+    }
+  ],
+  "bachelor": [],
+  "master": []
+}
