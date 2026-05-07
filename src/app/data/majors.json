@@ -1,0 +1,49 @@
+[
+  {
+    "id": "mis",
+    "code": "MIS",
+    "name": "Management Information System",
+    "icon": "ti-device-desktop-analytics",
+    "degrees": [
+      "associate",
+      "bachelor",
+      "master"
+    ],
+    "colorMap": {
+      "associate": "teal",
+      "bachelor": "purple",
+      "master": "coral"
+    },
+    "semestersFile": "mis.semesters.json"
+  },
+  {
+    "id": "design",
+    "code": "DESIGN",
+    "name": "Design",
+    "icon": "ti-brush",
+    "degrees": [
+      "associate",
+      "bachelor",
+      "master"
+    ],
+    "colorMap": {
+      "associate": "teal",
+      "bachelor": "purple",
+      "master": "coral"
+    },
+    "semestersFile": "design.semesters.json"
+  },
+  {
+    "id": "bit",
+    "code": "BIT",
+    "name": "Business Information Technology",
+    "icon": "ti-briefcase",
+    "degrees": [
+      "bachelor"
+    ],
+    "colorMap": {
+      "bachelor": "blue"
+    },
+    "semestersFile": "bit.semesters.json"
+  }
+]

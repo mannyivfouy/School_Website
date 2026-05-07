@@ -1,0 +1,28 @@
+[
+  {
+    "id": "associate",
+    "label": "Associate Degree",
+    "shortLabel": "Associate",
+    "years": 2,
+    "totalSemesters": 4,
+    "color": "teal",
+    "icon": "ti-certificate"
+  },
+  {
+    "id": "bachelor",
+    "label": "Bachelor Degree",
+    "shortLabel": "Bachelor",
+    "years": 4,
+    "totalSemesters": 8,
+    "color": "purple"
+  },
+  {
+    "id": "master",
+    "label": "Master Degree",
+    "shortLabel": "Master",
+    "years": 2,
+    "totalSemesters": 4,
+    "color": "coral",
+    "icon": "ti-crown"
+  }
+]
