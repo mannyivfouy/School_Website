@@ -69,5 +69,46 @@
       "TITLE": "Connect With Us",
       "DESCRIPTION": "Stay updated with our latest news "
     }
+  },
+  "FACILITIES": {
+    "TITLE": "Our Facilities",
+    "SUBTITLE": "Modern learning space for innovation and creativity",
+    "ROOMS": [
+      {
+        "TITLE": "IT Department",
+        "DESCRIPTION": "Student who are interested to learn more on repairs and networking can do in the IT Department after school hours. We also provide free repair service (excluding parts) to all students.",
+        "IMAGE": "/assets/images/"
+      },
+      {
+        "TITLE": "Computer Room",
+        "DESCRIPTION": "Our computer labs are equipped with air conditioning to provide student an comfortable and spacious learning environment. All computers are equipped with the latest computer technology to provide our students with the best training aids.",
+        "IMAGE": "/assets/images/"
+      },
+      {
+        "TITLE": "Lecture Room",
+        "DESCRIPTION": "Lecture rooms are equip with air-cons and LCD projector to provide the best learning aids available to the students. The computer in the Lecture are also connected to the Internet and academy networking for most effective learning.",
+        "IMAGE": "/assets/images/"
+      },
+      {
+        "TITLE": "Design Room",
+        "DESCRIPTION": "The design rooms are equipped with different traditional and modern tools in different rooms for the different units learning purposes.",
+        "IMAGE": "/assets/images/"
+      },
+      {
+        "TITLE": "Library",
+        "DESCRIPTION": "Our library provides students with a comfortable and cooling environment with approximately 5000+ books and magazines. These books are purchase externally from Singapore, USA and Australia. With the modern technology, e-books are also available for the students. We also provided free WI-FI for students too.",
+        "IMAGE": "/assets/images/"
+      },
+      {
+        "TITLE": "Canteen",
+        "DESCRIPTION": "We have a canteen at the roof top for all staff, lecturers and students. The environment is clean and the food is nice and affordable.",
+        "IMAGE": "/assets/images/"
+      },
+      {
+        "TITLE": "Parking Lot",
+        "DESCRIPTION": "We have a basement car park that can cater to thousand of motorcycles, bicycles and cars.",
+        "IMAGE": "/assets/images/"
+      }
+    ]
   }
 }
