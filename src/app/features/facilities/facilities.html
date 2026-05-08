@@ -1,1 +1,38 @@
-<p>facilities works!</p>
+<div class="w-full pt-8 space-y-6 animate__animated animate__fadeIn">
+  <!-- Section Title -->
+  <div class="text-center">
+    <h1 class="text-2xl font-bold text-gray-700">
+      {{ 'FACILITIES.TITLE' | translate }}
+    </h1>
+
+    <p class="text-gray-600 mx-auto text-lg">
+      {{ 'FACILITIES.SUBTITLE' | translate }}
+    </p>
+  </div>
+
+  @for (room of rooms; track room.title; let i = $index) {
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center bg-white rounded-3xl shadow-md p-4 lg:p-6"
+    >
+      <!-- IMAGE -->
+      <div [class.lg:order-2]="i % 2 !== 0">
+        <img
+          [src]="room.IMAGE"
+          [alt]="room.TITLE"
+          class="w-full h-[200px] object-cover rounded-xl hover:scale-105 transition duration-500"
+        />
+      </div>
+
+      <!-- TEXT -->
+      <div class="space-y-3" [class.lg:order-1]="i % 2 !== 0">
+        <h2 class="text-2xl font-bold text-gray-700">
+          {{ room.TITLE }}
+        </h2>
+
+        <p class="text-gray-600 text-lg leading-relaxed">
+          {{ room.DESCRIPTION }}
+        </p>
+      </div>
+    </div>
+  }
+</div>

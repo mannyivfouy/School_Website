@@ -28,6 +28,10 @@ export const routes: Routes = [
         path: 'contact',
         loadComponent: () => import('./features/contact/contact').then((m) => m.Contact),
       },
+      {
+        path: 'facilities',
+        loadComponent: () => import('./features/facilities/facilities').then((m) => m.Facilities),
+      },
     ],
   },
 ];
