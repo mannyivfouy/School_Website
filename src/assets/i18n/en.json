@@ -110,5 +110,9 @@
         "IMAGE": "/assets/images/"
       }
     ]
+  },
+  "INTERN" : {
+    "TITLE" : "Internship Program",
+    "DESCRIPTION" : ""
   }
 }
