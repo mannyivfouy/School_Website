@@ -4,11 +4,6 @@ import { Layout } from './layout/layout';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'layout/home',
-    pathMatch: 'full',
-  },
-  {
-    path: 'layout',
     component: Layout,
     children: [
       {
