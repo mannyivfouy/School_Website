@@ -111,8 +111,14 @@
       }
     ]
   },
-  "INTERN" : {
-    "TITLE" : "Internship Program",
-    "DESCRIPTION" : ""
+  "INTERN": {
+    "TITLE": "Internship Program",
+    "DESCRIPTION": ""
+  },
+  "STATS_CARD": {
+    "STUDENTS": "Students",
+    "TEACHERS": "Teachers",
+    "CLASSES": "Classes",
+    "YEARS": "Years of Excellence "
   }
 }
