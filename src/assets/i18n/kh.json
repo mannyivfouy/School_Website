@@ -110,5 +110,14 @@
         "IMAGE": "/assets/images/"
       }
     ]
+  },
+  "INTERN": {
+    "TITLE": "កម្មសិក្សា",
+    "DESCRIPTION": ""
+  },
+  "STATS_CARD": {
+    "STUDENTS": "សិស្សនិស្សិត",
+    "TEACHERS": "លោកគ្រូ អ្នកគ្រូ",
+    "CLASSES": "បន្ទប់សិក្សា"
   }
 }
