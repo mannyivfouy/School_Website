@@ -1,4 +1,5 @@
 {
   "cSpell.words": ["SETEC"],
-  "cSpell.ignoreWords": ["Kork", "Laak", "Sangkat", "Teuk"]
+  "cSpell.ignoreWords": ["Kork", "Laak", "Sangkat", "Teuk"],
+   "css.validate": false
 }

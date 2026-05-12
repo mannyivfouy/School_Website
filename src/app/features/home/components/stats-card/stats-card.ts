@@ -32,6 +32,12 @@ export class StatsCard implements OnInit {
     this.langService.setLanguage(lang);
   }
 
+  startCount() {
+    this.stats.forEach((stat, i) => {
+      setTimeout(() => this.animate(stat), i * 150);
+    });
+  }
+
   easeInOut(t: number): number {
     return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
   }
