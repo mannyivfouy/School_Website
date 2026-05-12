@@ -1,7 +1,17 @@
-<div class="animate__animated animate__fadeIn">
+<div>
   <div class="relative left-1/2 right-1/2 w-screen -translate-x-1/2">
-    <app-image-slider></app-image-slider>
+    <app-image-slider scrollAnimate animClass="animate-fade-in" class="block"></app-image-slider>
   </div>
-  <app-welcome-message></app-welcome-message>
-  <app-stats-card></app-stats-card>
+  <app-welcome-message
+    scrollAnimate
+    animClass="animate-fade-up"
+    class="block"
+  ></app-welcome-message>
+  <app-stats-card
+    scrollAnimate
+    animClass="animate-fade-up"
+    class="block [animation-delay:150ms]"
+    (animated)="statsCard.startCount()"
+    #statsCard
+  ></app-stats-card>
 </div>
