@@ -68,6 +68,10 @@
     "CONNECT": {
       "TITLE": "Connect With Us",
       "DESCRIPTION": "Stay updated with our latest news "
+    },
+    "COPYRIGHT" : {
+      "RESERVED" : "© 2026 SETEC Institute. All rights reserved",
+      "SUPPORT" : "Support By IT Department"
     }
   },
   "FACILITIES": {
