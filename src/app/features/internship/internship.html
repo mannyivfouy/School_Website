@@ -1,11 +1,80 @@
+<!-- HEADER -->
 <div class="w-full pt-8 space-y-6 animate__animated animate__fadeIn">
   <div class="text-center">
     <h1 class="text-2xl font-bold text-gray-700">
       {{ 'INTERN.TITLE' | translate }}
     </h1>
 
-    <p class="text-gray-600 mx-auto text-lg">
-      
+    <p class="text-gray-600 mx-auto text-lg text-justify">
+      {{ 'INTERN.DESCRIPTION' | translate }}
     </p>
+  </div>
+</div>
+
+<!-- INTERN SECTION -->
+<div *ngFor="let major of majors" class="mt-10 animate__animated animate-fade-up">
+  <h2 class="text-2xl font-bold text-gray-700 mb-5">
+    {{ majorLabels[major] }}
+    <hr
+      class="border-t-3 rounded-full w-40"
+      [ngClass]="{
+        'border-[#0E76BD]': major === 'MIS',
+        'border-[#EA098D]': major === 'BIT',
+        'border-[#F7941D]': major === 'Design',
+      }"
+    />
+  </h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div
+      *ngFor="let student of internships[major]; trackBy : trackByStudent"
+      class="group overflow-hidden rounded-3xl shadow-lg bg-[#30302E] hover:-translate-y-1 transition duration-300"
+    >
+      <!-- TOP -->
+      <div class="relative h-60 w-full overflow-hidden bg-[#FDE7CC]">
+        <!-- FULL IMAGE BACKGROUND -->
+        <img [src]="student.image" class="absolute inset-0 w-full h-full object-cover" />
+
+        <!-- BADGE -->
+        <div
+          class="absolute top-3 right-3 px-3 py-1 text-xs rounded-full font-bold z-10 text-white"
+          [ngClass]="{
+            'bg-[#0E76BD]': major === 'MIS',
+            'bg-[#EA098D]': major === 'BIT',
+            'bg-[#F7941D]': major === 'Design',
+          }"
+        >
+          {{ major }}
+        </div>
+      </div>
+
+      <!-- BOTTOM -->
+      <div class="p-4 text-white">
+        <h3 class="text-lg font-bold">
+          {{ student.name }}
+        </h3>
+
+        <p class="text-gray-400 text-sm">
+          {{ student.position }}
+        </p>
+
+        <div class="border-t border-gray-700 my-3"></div>
+
+        <!-- COMPANY -->
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-lg bg-gray-700 flex items-center justify-center overflow-hidden"
+          >
+            <img [src]="student.companyImg" class="w-full h-full object-cover" alt="company logo" />
+          </div>
+
+          <div>
+            <h4 class="text-sm font-bold">
+              {{ student.company }}
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
