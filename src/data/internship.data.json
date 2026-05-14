@@ -1,0 +1,50 @@
+{
+  "MIS": [
+    {
+      "name": "Rann Dara",
+      "position": "Network Engineer",
+      "company": "ABA Bank",
+      "image": "assets/images/ranndara.JPG",
+      "companyImg": "assets/images/aba.png"
+    },
+    {
+      "name": "Sorn Sopanha",
+      "position": "Mobile Developer",
+      "company": "ABA Bank",
+      "image": "assets/images/sopanha.jpg",
+      "companyImg": "assets/images/aba.png"
+    },
+    {
+      "name": "",
+      "position": "",
+      "company": "",
+      "image": "assets/images/noImage.jpg",
+      "companyImg": "assets/images/noImage.jpg"
+    },
+    {
+      "name": "",
+      "position": "",
+      "company": "",
+      "image": "assets/images/noImage.jpg",
+      "companyImg": "assets/images/noImage.jpg"
+    }
+  ],
+  "BIT": [
+    {
+      "name": "",
+      "position": "",
+      "company": "",
+      "image": "assets/images/noImage.jpg",
+      "companyImg": "assets/images/noImage.jpg"
+    }
+  ],
+  "Design": [
+    {
+      "name": "",
+      "position": "",
+      "company": "",
+      "image": "assets/images/noImage.jpg",
+      "companyImg": "assets/images/noImage.jpg"
+    }
+  ]
+}
