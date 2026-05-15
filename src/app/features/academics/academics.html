@@ -1,0 +1,40 @@
+<!-- HEADER -->
+<div class="w-full pt-8 space-y-6 animate__animated animate__fadeIn">
+  <div class="text-center">
+    <h1 class="text-2xl font-bold text-gray-700">Academics</h1>
+
+    <p class="text-gray-600 mx-auto text-lg text-justify">
+      <!-- {{ 'INTERN.DESCRIPTION' | translate }} -->
+    </p>
+  </div>
+</div>
+
+<div class="space-y-14">
+  <div *ngFor="let group of groupedDegrees">
+    <!-- DEGREE TITLE -->
+    <h1 class="text-2xl font-bold text-[#0B5D3B]">
+      {{ group.type }}
+    </h1>
+
+    <!-- DIVIDER -->
+    <div class="h-[2px] w-full bg-gray-200 my-4"></div>
+
+    <!-- MAJOR CARDS -->
+    <div class="grid grid-cols-4 gap-6">
+      <app-major-card
+        *ngFor="let major of group.majors"
+        [major]="major"
+        (learnMore)="openMajor(major, group.type)"
+      ></app-major-card>
+    </div>
+  </div>
+</div>
+
+<!-- =========================
+     MODAL
+========================= -->
+<app-major-modal
+  *ngIf="selectedCard"
+  [card]="selectedCard"
+  (close)="closeModal()"
+></app-major-modal>
