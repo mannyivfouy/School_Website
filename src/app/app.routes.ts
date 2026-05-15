@@ -31,6 +31,10 @@ export const routes: Routes = [
         path: 'internship',
         loadComponent: () => import('./features/internship/internship').then((m) => m.Internship),
       },
+      {
+        path: 'academics',
+        loadComponent: () => import('./features/academics/academics').then((m) => m.Academics),
+      },
     ],
   },
 ];
