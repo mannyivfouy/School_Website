@@ -6,54 +6,44 @@ export interface Subject {
 }
 
 export interface SemesterSubjects {
-  semester: number;
+  semester: any;
   subjects: Subject[];
 }
 
 export const misBridgingSubjects: SemesterSubjects[] = [
   {
-    semester: 1,
+    semester: 'Bridging Course',
     subjects: [
       {
-        code: 'A+ I',
-        name: 'A+ (Computer Maintenance & Repair) I',
+        code: 'C++ & C# I',
+        name: 'C++ & C# Programming I',
+        hours: 21,
       },
       {
-        code: 'C++',
-        name: 'C++ Programming',
+        code: 'DS I & II',
+        name: 'Data Structure I & II',
+        hours: 8,
       },
       {
-        code: 'OA',
-        name: 'Office Application',
+        code: 'A+ I & II',
+        name: 'A+ (Computer Maintenance & Repair) I & II',
+        hours: 8,
       },
       {
-        code: 'DS I',
-        name: 'Data Structure I',
+        code: 'GD I & II',
+        name: 'Graphic Design I & II',
+        hours: 14,
       },
       {
-        code: 'HIST',
-        name: 'History',
+        code: 'AC',
+        name: 'Accounting',
+        hours: 6,
       },
       {
-        code: 'MGT',
-        name: 'Principle of Management',
-      },
-      {
-        code: 'CM',
-        name: 'Computer Mathematics',
-      },
-      {
-        code: 'GD I',
-        name: 'Graphic Design I',
-      },
-      {
-        code: 'ENG I',
-        name: 'English I',
+        code: 'WD I',
+        name: 'Web Development I',
+        hours: 6,
       },
     ],
-  },
-  {
-    semester: 2,
-    subjects: [],
   },
 ];
