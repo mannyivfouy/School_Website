@@ -124,5 +124,9 @@
     "TEACHERS": "Teachers",
     "CLASSES": "Classes",
     "YEARS": "Years of Excellence"
+  },
+  "ACADEMICS" :
+  {
+    "TITLE" : "Academic Programs"
   }
 }

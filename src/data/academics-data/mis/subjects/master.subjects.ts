@@ -6,54 +6,139 @@ export interface Subject {
 }
 
 export interface SemesterSubjects {
-  semester: number;
+  semester: any;
   subjects: Subject[];
 }
 
 export const misMasterSubjects: SemesterSubjects[] = [
   {
-    semester: 1,
+    semester: 'Common Course',
     subjects: [
       {
-        code: 'A+ I',
-        name: 'A+ (Computer Maintenance & Repair) I',
+        code: 'MIT801',
+        name: 'Human Resource Management',
+        credit: 3,
       },
       {
-        code: 'C++',
-        name: 'C++ Programming',
+        code: 'MIT802',
+        name: 'Business Statistics',
+        credit: 3,
       },
       {
-        code: 'OA',
-        name: 'Office Application',
-      },
-      {
-        code: 'DS I',
-        name: 'Data Structure I',
-      },
-      {
-        code: 'HIST',
-        name: 'History',
-      },
-      {
-        code: 'MGT',
-        name: 'Principle of Management',
-      },
-      {
-        code: 'CM',
-        name: 'Computer Mathematics',
-      },
-      {
-        code: 'GD I',
-        name: 'Graphic Design I',
-      },
-      {
-        code: 'ENG I',
-        name: 'English I',
+        code: 'MIT803',
+        name: 'Research Methodology',
+        credit: 3,
       },
     ],
   },
   {
-    semester: 2,
-    subjects: [],
+    semester: 'Major Course',
+    subjects: [
+      {
+        code: 'MIT804',
+        name: 'Relational Database Management System',
+        credit: 3,
+      },
+      {
+        code: 'MIT805',
+        name: 'Advance Database Administration Workshop I',
+        credit: 3,
+      },
+      {
+        code: 'MIT806',
+        name: 'Advance Database Administration Workshop II',
+        credit: 3,
+      },
+      {
+        code: 'MIT807',
+        name: 'Software Project Management',
+        credit: 3,
+      },
+      {
+        code: 'MIT808',
+        name: 'Web Application Development',
+        credit: 3,
+      },
+      {
+        code: 'MIT809',
+        name: 'Java Programming With Oracle',
+        credit: 3,
+      },
+      {
+        code: 'MIT810',
+        name: 'Project On DOTNET Framework',
+        credit: 3,
+      },
+      {
+        code: 'MIT811',
+        name: 'Microsoft Network Administration',
+        credit: 3,
+      },
+      {
+        code: 'MIT812',
+        name: 'Advance Microsoft Network Administration',
+        credit: 3,
+      },
+      {
+        code: 'MIT813',
+        name: 'Network Security',
+        credit: 3,
+      },
+      {
+        code: 'MIT814',
+        name: 'Advance Network Security',
+        credit: 3,
+      },
+    ],
+  },
+  {
+    semester: 'Elective Course',
+    subjects: [
+      {
+        code: 'MIT815',
+        name: 'Open Source Mobile Application',
+        credit: 3,
+      },
+      {
+        code: 'MIT816',
+        name: 'IOS Mobile Application',
+        credit: 3,
+      },
+      {
+        code: 'MIT817',
+        name: 'Linux Administration',
+        credit: 3,
+      },
+      {
+        code: 'MIT818',
+        name: 'Advance Linux Administration',
+        credit: 3,
+      },
+    ],
+  },
+  {
+    semester: 'MOE Exams',
+    subjects: [
+      {
+        code: 'MIT-EX1',
+        name: 'Database Management And Administration',
+        credit: 3,
+      },
+      {
+        code: 'MIT-EX2',
+        name: 'Information Security',
+        credit: 3,
+      },
+      {
+        code: 'MIT-EX3e',
+        name: 'Network Administration',
+        credit: 3,
+      },
+      {
+        code: 'MIT-EX4',
+        name: 'Project Management',
+        credit: 3,
+      },
+    ],
   },
 ];

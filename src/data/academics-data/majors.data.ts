@@ -1,4 +1,7 @@
-
+import { designAssociateSubjects } from './design/subjects/associate.subjects';
+import { designBachelorSubjects } from './design/subjects/bachelor.subjects';
+import { designBridgingSubjects } from './design/subjects/bridging.subjects';
+import { designMasterSubjects } from './design/subjects/master.subjects';
 import { misAssociateSubjects } from './mis/subjects/associate.subjects';
 import { SemesterSubjects } from './mis/subjects/bachelor.subjects';
 import { misBachelorSubjects } from './mis/subjects/bachelor.subjects';
@@ -14,7 +17,7 @@ export interface DegreeProgram {
 export interface Major {
   id: string;
   name: string;
-  description: string;
+  image?: string;
   degrees: DegreeProgram[];
 }
 
@@ -22,12 +25,12 @@ export const majorsData: Major[] = [
   {
     id: 'mis',
     name: 'Management Information System',
-    description: '',
+    image: 'assets/images/majorImages/mis.jpg',
     degrees: [
       {
-        type : 'Associate Degrees',
+        type: 'Associate Degrees',
         description: '',
-        subjects : misAssociateSubjects
+        subjects: misAssociateSubjects,
       },
       {
         type: 'Bachelor Degrees',
@@ -40,22 +43,43 @@ export const majorsData: Major[] = [
         subjects: misMasterSubjects,
       },
       {
-        type : 'Bridging Course',
-        description : '',
-        subjects: misBridgingSubjects
-      }
+        type: 'Bridging Course',
+        description: '',
+        subjects: misBridgingSubjects,
+      },
     ],
   },
   {
     id: 'bit',
     name: 'Business Information Technology',
-    description: '',
+    image: 'assets/images/majorImages/bit.jpg',
     degrees: [],
   },
   {
     id: 'design',
     name: 'Design',
-    description: '',
-    degrees: [],
+    image: 'assets/images/majorImages/design.jpg',
+    degrees: [
+      {
+        type: 'Associate Degrees',
+        description: '',
+        subjects: designAssociateSubjects,
+      },
+      {
+        type: 'Bachelor Degrees',
+        description: '',
+        subjects: designBachelorSubjects,
+      },
+      {
+        type: 'Master Degrees',
+        description: '',
+        subjects: designMasterSubjects,
+      },
+      {
+        type: 'Bridging Course',
+        description: '',
+        subjects: designBridgingSubjects,
+      },
+    ],
   },
 ];

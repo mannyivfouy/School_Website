@@ -5,10 +5,12 @@ import { MajorCard } from './components/major-card/major-card';
 import { MajorModal } from './components/major-modal/major-modal';
 import { DOCUMENT } from '@angular/common';
 import { Inject } from '@angular/core';
+import { Language } from '../../services/language';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-academics',
-  imports: [CommonModule, MajorCard, MajorModal],
+  imports: [CommonModule, MajorCard, MajorModal, TranslateModule],
   templateUrl: './academics.html',
   styleUrl: './academics.css',
 })
@@ -16,8 +18,12 @@ export class Academics {
   majors = majorsData;
   selectedMajor: Major | null = null;
   groupedDegrees: any[] = [];
+  currentLang: string = localStorage.getItem('lang') || 'en';
 
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private langService: Language,
+  ) {}
 
   ngOnInit() {
     this.groupDegrees();
@@ -60,5 +66,10 @@ export class Academics {
     this.selectedCard = null;
 
     this.document.body.style.overflow = 'auto';
+  }
+
+  changeLang(lang: string) {
+    this.currentLang = lang;
+    this.langService.setLanguage(lang);
   }
 }

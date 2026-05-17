@@ -1,7 +1,9 @@
 <!-- HEADER -->
 <div class="w-full pt-8 space-y-6 animate__animated animate__fadeIn">
   <div class="text-center">
-    <h1 class="text-2xl font-bold text-gray-700">Academics</h1>
+    <h1 class="text-2xl font-bold text-gray-700">
+      {{ 'ACADEMICS.TITLE' | translate }}
+    </h1>
 
     <p class="text-gray-600 mx-auto text-lg text-justify">
       <!-- {{ 'INTERN.DESCRIPTION' | translate }} -->
@@ -9,15 +11,15 @@
   </div>
 </div>
 
-<div class="space-y-14">
+<div class="space-y-14 animate__animated animate-fade-up">
   <div *ngFor="let group of groupedDegrees">
     <!-- DEGREE TITLE -->
-    <h1 class="text-2xl font-bold text-[#0B5D3B]">
+    <h1 class="text-2xl font-bold text-gray-700 mb-2">
       {{ group.type }}
     </h1>
 
     <!-- DIVIDER -->
-    <div class="h-[2px] w-full bg-gray-200 my-4"></div>
+    <hr class="h-[3px] w-30 bg-[#00a76d] border-0 mb-6" />
 
     <!-- MAJOR CARDS -->
     <div class="grid grid-cols-4 gap-6">

@@ -12,8 +12,9 @@ export interface SemesterSubjects {
   subjects: Subject[];
 }
 
-export const misBachelorSubjects: SemesterSubjects[] = [
+export const designBachelorSubjects: SemesterSubjects[] = [
   {
+    // year: 1,
     semester: 1,
     price: 390,
     subjects: [
@@ -56,6 +57,7 @@ export const misBachelorSubjects: SemesterSubjects[] = [
     ],
   },
   {
+    // year: 1,
     semester: 2,
     price: 390,
     subjects: [
@@ -98,6 +100,7 @@ export const misBachelorSubjects: SemesterSubjects[] = [
     ],
   },
   {
+    // year: 1,
     semester: 3,
     price: 390,
     subjects: [
@@ -140,6 +143,7 @@ export const misBachelorSubjects: SemesterSubjects[] = [
     ],
   },
   {
+    // year: 1,
     semester: 4,
     price: 390,
     subjects: [
@@ -182,6 +186,7 @@ export const misBachelorSubjects: SemesterSubjects[] = [
     ],
   },
   {
+    // year: 1,
     semester: 5,
     price: 390,
     subjects: [
@@ -224,6 +229,7 @@ export const misBachelorSubjects: SemesterSubjects[] = [
     ],
   },
   {
+    // year: 1,
     semester: 6,
     price: 390,
     subjects: [
@@ -266,6 +272,7 @@ export const misBachelorSubjects: SemesterSubjects[] = [
     ],
   },
   {
+    // year: 1,
     semester: 7,
     price: 390,
     subjects: [
@@ -308,16 +315,17 @@ export const misBachelorSubjects: SemesterSubjects[] = [
     ],
   },
   {
+    // year: 1,
     semester: 8,
     price: 390,
     subjects: [
       {
         code: '',
-        name: 'Student Internship Program or Research (Thesis)',
+        name: 'Student Internship Program or Research (Thesis)'
       },
       {
         code: '',
-        name: 'Career Placement Program',
+        name: 'Career Placement Program'
       },
     ],
   },
