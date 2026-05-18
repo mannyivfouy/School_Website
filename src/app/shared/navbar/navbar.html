@@ -58,23 +58,18 @@
     </ul>
 
     <!-- Right side -->
-    <div class="flex items-center gap-2">
-      <button
-        (click)="changeLang('en')"
-        [class.active-lang]="currentLang === 'en'"
-        class="lang-btn"
-      >
-        <img src="assets/icons/usFlag.png" alt="EN" width="20" class="rounded-sm" />
-        <span>EN</span>
-      </button>
-
-      <button
-        (click)="changeLang('kh')"
-        [class.active-lang]="currentLang === 'kh'"
-        class="lang-btn"
-      >
-        <img src="assets/icons/khFlag.png" alt="KH" width="20" class="rounded-sm" />
-        <span>KH</span>
+    <div class="flex items-center">
+      <button class="lang-btn flex items-center gap-2" (click)="toggleLanguage()">
+        <img
+          [src]="currentLang === 'en'
+          ? 'assets/icons/usFlag.png'
+          : 'assets/icons/khFlag.png'"
+          width="20"
+          class="rounded-sm"
+        />
+        <span>
+          {{currentLang === 'en' ? 'EN' : 'KH'}}
+        </span>
       </button>
     </div>
   </div>
