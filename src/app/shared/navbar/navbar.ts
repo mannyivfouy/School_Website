@@ -19,4 +19,9 @@ export class Navbar {
     this.currentLang = lang;
     this.langService.setLanguage(lang);
   }
+
+  toggleLanguage() {
+    const newLang = this.currentLang === 'en' ? 'kh' : 'en';
+    this.changeLang(newLang);
+  }
 }
