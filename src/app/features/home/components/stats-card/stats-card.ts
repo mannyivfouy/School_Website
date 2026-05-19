@@ -17,6 +17,7 @@ export class StatsCard implements OnInit {
     { value: 80, display: signal('0') },
     { value: 52, display: signal('0') },
     { value: 12, display: signal('0') },
+    { value: 3, display: signal('0') },
   ];
 
   constructor(private langService: Language) {}
