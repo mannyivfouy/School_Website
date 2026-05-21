@@ -124,10 +124,25 @@
     "TEACHERS": "Teachers",
     "CLASSES": "Classes",
     "YEARS": "Years of Excellence",
-    "ACADEMICS" : "Academics"
+    "ACADEMICS": "Academics"
   },
-  "ACADEMICS" :
-  {
-    "TITLE" : "Academic Programs"
+  "ACADEMICS": {
+    "TITLE": "Academic Programs"
+  },
+  "CHOOSE_SETEC": {
+    "TITLE": "WHY CHOOSE SETEC INSTITUTE?",
+    "DESCRIPTION1": "At SETEC INSTITUTE, we conduct up-to-date degree programs to equip our students with skills that companies nowadays are looking for. Other then designing the programs with important Management units like Public Relations, Marketing and Accounting, we also place emphasis on Business English. In summary, our programs will not only provide specialization in the respective majors, we also prepare our students for their career after graduation.",
+    "DESCRIPTION2": "Our programs include theoretical lessons, hands-on practical lessons and we also organize workshops and talks for our students to meet, learn and communicate with professionals in their field of expertise from recognized companies and organizations.",
+    "GRADUATE_ATTRIBUTES": {
+      "TITLE": "GRADUATE ATTRIBUTES",
+      "SUBTITLE1": "Practical & Industry Skills",
+      "SUB_DESC1": "Providing hands-on experience and industry-oriented training to prepare students for future careers",
+      "SUBTITLE2": "Leadership & Management",
+      "SUB_DESC2": "Developing leadership, teamwork, and management skills for professional and organizational success",
+      "SUBTITLE3": "Communication & Global Mindset",
+      "SUB_DESC3": "Building communication, collaboration, and professional ethics for success in local and international environments",
+      "SUBTITLE4": "Technology & Innovation",
+      "SUB_DESC4": "Empowering students with modern technological knowledge and innovative thinking to solve real-world challenges"
+    }
   }
 }
