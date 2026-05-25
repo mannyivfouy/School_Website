@@ -1,76 +1,192 @@
 <nav class="bg-white shadow-md fixed w-full top-0 left-0 z-50" [class.font-khmer]>
-  <div class="max-w-[1800px] mx-auto px-4 py-3 flex items-center justify-between">
-    <!-- Logo -->
-    <div routerLink="/layout/home" class="logo">
-      <div class="flex items-center">
-        <img src="assets/images/logo.png" alt="logo" width="70" class="mr-5" />
-        <div class="flex flex-col justify-center">
-          <div class="text-2xl font-bold text-blue-600">
-            {{ 'NAV.INSTITUTE' | translate }}
+  <div class="max-w-[1800px] mx-auto px-4 py-3 bg-white">
+    <!-- ========================= -->
+    <!-- TOP NAV -->
+    <!-- ========================= -->
+    <div class="flex items-center justify-between">
+      <!-- ========================= -->
+      <!-- LOGO -->
+      <!-- ========================= -->
+      <div routerLink="/layout/home" class="logo cursor-pointer">
+        <div class="flex items-center">
+          <!-- REMARK:
+               RESPONSIVE LOGO SIZE
+               width="70" -> class
+          -->
+          <img
+            src="assets/images/logo.png"
+            alt="logo"
+            class="w-12 sm:w-14 lg:w-[70px] mr-3 lg:mr-5"
+          />
+
+          <div class="flex flex-col justify-center">
+            <!-- REMARK:
+                 RESPONSIVE TEXT
+            -->
+            <div class="text-lg sm:text-xl lg:text-2xl font-bold">
+              {{ 'NAV.INSTITUTE' | translate }}
+            </div>
+
+            <small class="sm:block text-gray-500 text-xs lg:text-sm leading-tight">
+              <i>{{ 'NAV.SLOGAN_1' | translate }}</i>
+            </small>
+
+            <small class="sm:block text-gray-500 text-xs lg:text-sm leading-tight">
+              <i>{{ 'NAV.SLOGAN_2' | translate }}</i>
+            </small>
           </div>
-          <small class="text-gray-500 text-sm leading-tight">
-            <i> {{ 'NAV.SLOGAN_1' | translate }}</i>
-          </small>
-          <small class="text-gray-500 text-sm leading-tight">
-            <i> {{ 'NAV.SLOGAN_2' | translate }}</i>
-          </small>
         </div>
+      </div>
+
+      <!-- ========================= -->
+      <!-- DESKTOP MENU -->
+      <!-- ========================= -->
+      <!-- REMARK:
+           hidden on mobile
+           flex on medium+
+      -->
+      <ul
+        class="hidden md:flex space-x-4 lg:space-x-6 text-gray-700 font-medium text-base lg:text-lg"
+      >
+        <li>
+          <a routerLink="/home" class="nav-link" routerLinkActive="active">
+            {{ 'NAV.HOME' | translate }}
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/about" class="nav-link" routerLinkActive="active">
+            {{ 'NAV.ABOUT_US' | translate }}
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/contact" class="nav-link" routerLinkActive="active">
+            {{ 'NAV.CONTACT_US' | translate }}
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/academics" class="nav-link" routerLinkActive="active">
+            {{ 'NAV.ACADEMIC' | translate }}
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/internship" class="nav-link" routerLinkActive="active">
+            {{ 'NAV.INTERNSHIP' | translate }}
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/facilities" class="nav-link" routerLinkActive="active">
+            {{ 'NAV.FACILITIES' | translate }}
+          </a>
+        </li>
+
+        <li>
+          <a href="" class="nav-link" routerLinkActive="active">
+            {{ 'NAV.STRUCTURE' | translate }}
+          </a>
+        </li>
+      </ul>
+
+      <!-- ========================= -->
+      <!-- RIGHT SIDE -->
+      <!-- ========================= -->
+      <div class="flex items-center gap-3">
+        <!-- LANGUAGE BUTTON -->
+        <!-- REMARK:
+             SMALLER ON MOBILE
+        -->
+        <button
+          class="lang-btn flex items-center gap-2 px-3 py-2 rounded-lg"
+          (click)="toggleLanguage()"
+        >
+          <img
+            [src]="currentLang === 'en' ? 'assets/icons/usFlag.png' : 'assets/icons/khFlag.png'"
+            class="w-5 rounded-sm"
+          />
+
+          <!-- REMARK:
+               HIDE TEXT ON VERY SMALL SCREEN
+          -->
+          <span class="hidden sm:block">
+            {{ currentLang === 'en' ? 'EN' : 'KH' }}
+          </span>
+        </button>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button
+          class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"
+          (click)="toggleMenu()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7 text-gray-700"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
       </div>
     </div>
 
-    <!-- Menu -->
-    <ul class="md:flex space-x-6 text-gray-700 font-medium text-lg">
-      <li>
-        <a routerLink="/home" class="nav-link" routerLinkActive="active">
-          {{ 'NAV.HOME' | translate }}
-        </a>
-      </li>
-      <li>
-        <a routerLink="/about" class="nav-link" routerLinkActive="active">
-          {{ 'NAV.ABOUT_US' | translate }}
-        </a>
-      </li>
-      <li>
-        <a routerLink="/contact" class="nav-link" routerLinkActive="active">
-          {{ 'NAV.CONTACT_US' | translate }}</a
-        >
-      </li>
-      <li>
-        <a routerLink="/academics" class="nav-link" routerLinkActive="active">
-          {{ 'NAV.ACADEMIC' | translate }}
-        </a>
-      </li>
-      <li>
-        <a routerLink="/internship" class="nav-link" routerLinkActive="active">
-          {{ 'NAV.INTERNSHIP' | translate }}
-        </a>
-      </li>
-      <li>
-        <a routerLink="/facilities" class="nav-link" routerLinkActive="active">
-          {{ 'NAV.FACILITIES' | translate }}
-        </a>
-      </li>
-      <li>
-        <a href="" class="nav-link" routerLinkActive="active">
-          {{ 'NAV.STRUCTURE' | translate }}
-        </a>
-      </li>
-    </ul>
+    <!-- MOBILE MENU -->
+    <div
+      class="md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white"
+      [ngClass]="isMenuOpen ? 'max-h-96 opacity-100 pt-4' : 'max-h-0 opacity-0 pt-0'"
+    >
+      <ul class="flex flex-col gap-4 text-gray-700 font-medium">
+        <li>
+          <a routerLink="/home" class="nav-link" (click)="isMenuOpen = false">
+            {{ 'NAV.HOME' | translate }}
+          </a>
+        </li>
 
-    <!-- Right side -->
-    <div class="flex items-center">
-      <button class="lang-btn flex items-center gap-2" (click)="toggleLanguage()">
-        <img
-          [src]="currentLang === 'en'
-          ? 'assets/icons/usFlag.png'
-          : 'assets/icons/khFlag.png'"
-          width="20"
-          class="rounded-sm"
-        />
-        <span>
-          {{currentLang === 'en' ? 'EN' : 'KH'}}
-        </span>
-      </button>
+        <li>
+          <a routerLink="/about" class="nav-link" (click)="isMenuOpen = false">
+            {{ 'NAV.ABOUT_US' | translate }}
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/contact" class="nav-link" (click)="isMenuOpen = false">
+            {{ 'NAV.CONTACT_US' | translate }}
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/academics" class="nav-link" (click)="isMenuOpen = false">
+            {{ 'NAV.ACADEMIC' | translate }}
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/internship" class="nav-link" (click)="isMenuOpen = false">
+            {{ 'NAV.INTERNSHIP' | translate }}
+          </a>
+        </li>
+
+        <li>
+          <a routerLink="/facilities" class="nav-link" (click)="isMenuOpen = false">
+            {{ 'NAV.FACILITIES' | translate }}
+          </a>
+        </li>
+
+        <li>
+          <a href="" class="nav-link" (click)="isMenuOpen = false">
+            {{ 'NAV.STRUCTURE' | translate }}
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
