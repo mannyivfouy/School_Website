@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ANNOUNCEMENT_CONFIG } from '../config/announcement.config';
+import { ANNOUNCEMENT_CONFIG } from '../../../data/config/announcement.config';
 import { CommonModule } from '@angular/common';
 import { Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
@@ -19,8 +19,6 @@ export class AnnouncementEnrollment implements OnInit {
   modalClass = '';
   announcement = ANNOUNCEMENT_CONFIG;
 
-  private scrollY = 0;
-
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
   ngOnInit(): void {
@@ -36,13 +34,12 @@ export class AnnouncementEnrollment implements OnInit {
     if (this.showAlert) {
       this.overlayClass = 'animate__animated animate__fadeIn';
       this.modalClass = 'animate__animated animate__zoomIn';
-      this.document.body.style.overflow = 'hidden';
+      this.lockScroll();
     }
   }
 
   closeAlert(): void {
     this.isClosing = true;
-
     this.overlayClass = 'animate__animated animate__fadeOut pointer-events-none';
     this.modalClass = 'animate__animated animate__zoomOut';
 
@@ -50,7 +47,19 @@ export class AnnouncementEnrollment implements OnInit {
       this.showAlert = false;
       this.isClosing = false;
       this.showOverlay = false;
-      this.document.body.style.overflow = 'auto';
+      this.unlockScroll();
     }, 1000);
+  }
+
+  private lockScroll(): void {
+    this.document.body.style.overflowY = 'scroll';
+    this.document.body.style.position = 'fixed';
+    this.document.body.style.width = '100%';
+  }
+
+  private unlockScroll(): void {
+    this.document.body.style.overflowY = '';
+    this.document.body.style.position = '';
+    this.document.body.style.width = '';
   }
 }

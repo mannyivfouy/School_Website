@@ -34,4 +34,8 @@ export class Facilities implements OnInit {
   loadRooms() {
     this.rooms = this.translate.instant('FACILITIES.ROOMS');
   }
+
+  trackByIndex(index: number) {
+    return index;
+  }
 }

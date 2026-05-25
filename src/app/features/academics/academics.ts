@@ -59,17 +59,29 @@ export class Academics {
       subjects: degree.subjects,
     };
 
-    this.document.body.style.overflow = 'hidden';
+    this.lockScroll();
   }
 
   closeModal() {
     this.selectedCard = null;
 
-    this.document.body.style.overflow = 'auto';
+    this.unlockScroll();
   }
 
   changeLang(lang: string) {
     this.currentLang = lang;
     this.langService.setLanguage(lang);
+  }
+
+  private lockScroll(): void {
+    this.document.body.style.overflowY = 'scroll';
+    this.document.body.style.position = 'fixed';
+    this.document.body.style.width = '100%';
+  }
+
+  private unlockScroll(): void {
+    this.document.body.style.overflowY = '';
+    this.document.body.style.position = '';
+    this.document.body.style.width = '';
   }
 }

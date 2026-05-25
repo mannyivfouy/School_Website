@@ -10,7 +10,7 @@
     </p>
   </div>
 
-  @for (room of rooms; track room.title; let i = $index) {
+  @for (room of rooms; track $index; let i = $index) {
     <div
       class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center bg-white rounded-3xl shadow-md p-4 lg:p-6"
     >
