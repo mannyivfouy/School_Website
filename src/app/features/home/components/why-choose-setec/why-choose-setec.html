@@ -1,39 +1,46 @@
-<div class="w-full pt-8">
-  <div class="grid grid-cols-5 gap-6">
-    <div class="col-span-2 rounded-2xl shadow-lg p-6">
-      <h2 class="text-2xl text-gray-700 font-bold mb-2">
+<div class="w-full pt-6 sm:pt-8 lg:px-0">
+  <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8">
+    <!-- LEFT -->
+    <div class="lg:col-span-2 rounded-2xl shadow-lg p-5 sm:p-6">
+      <h2 class="text-xl sm:text-2xl text-gray-700 font-bold mb-2">
         {{ 'CHOOSE_SETEC.TITLE' | translate }}
       </h2>
-      <hr class="h-[3px] w-50 bg-[#00a76d] border-0 mb-4" />
 
-      <p class="text-gray-600 text-lg text-justify mb-4">
+      <hr class="h-[3px] w-24 bg-[#00a76d] border-0 mb-4" />
+
+      <p class="text-gray-600 text-base sm:text-lg text-left lg:text-justify mb-4">
         {{ 'CHOOSE_SETEC.DESCRIPTION1' | translate }}
       </p>
 
-      <p class="text-gray-600 text-lg text-justify">
+      <p class="text-gray-600 text-base sm:text-lg text-left lg:text-justify">
         {{ 'CHOOSE_SETEC.DESCRIPTION2' | translate }}
       </p>
     </div>
 
-    <div class="col-span-3 flex flex-col gap-6">
-      <div class="rounded-2xl shadow-lg p-6">
-        <h2 class="text-2xl text-gray-700 font-bold mb-2">
+    <!-- RIGHT -->
+    <div class="lg:col-span-3 flex flex-col gap-6">
+      <!-- TITLE CARD -->
+      <div class="rounded-2xl shadow-lg p-5 sm:p-6">
+        <h2 class="text-xl sm:text-2xl text-gray-700 font-bold mb-2">
           {{ 'CHOOSE_SETEC.GRADUATE_ATTRIBUTES.TITLE' | translate }}
         </h2>
 
-        <hr class="h-[3px] w-50 bg-[#00a76d] border-0 mb-6" />
+        <hr class="h-[3px] w-24 bg-[#00a76d] border-0 mb-6" />
 
-        <div class="grid grid-cols-2 gap-6">
+        <!-- GRID -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <!-- CARD -->
           <div class="rounded-2xl shadow-lg p-4">
-            <div class="flex items-center gap-3 mb-3">
+            <div class="flex items-start gap-3 mb-3">
               <div
-                class="bg-green-100 w-12 h-12 flex justify-center items-center rounded-lg shrink-0"
+                class="bg-green-100 w-10 h-10 sm:w-12 sm:h-12 flex justify-center items-center rounded-lg shrink-0"
               >
+                <!-- icon -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 640"
                   fill="none"
-                  class="w-10 h-10 shrink-0"
+                  class="w-8 h-8 sm:w-10 sm:h-10 shrink-0"
                 >
                   <path
                     fill="#00a76d"
@@ -42,26 +49,27 @@
                 </svg>
               </div>
 
-              <h2 class="text-lg font-bold text-[#00a76d]">
+              <h2 class="text-base sm:text-lg font-bold text-[#00a76d] leading-tight">
                 {{ 'CHOOSE_SETEC.GRADUATE_ATTRIBUTES.SUBTITLE1' | translate }}
               </h2>
             </div>
 
-            <p class="text-lg text-gray-600">
+            <p class="text-sm sm:text-lg text-gray-600">
               {{ 'CHOOSE_SETEC.GRADUATE_ATTRIBUTES.SUB_DESC1' | translate }}
             </p>
           </div>
 
+          <!-- CARD 2 -->
           <div class="rounded-2xl shadow-lg p-4">
-            <div class="flex items-center gap-3 mb-3">
+            <div class="flex items-start gap-3 mb-3">
               <div
-                class="bg-green-100 w-12 h-12 flex justify-center items-center rounded-lg shrink-0"
+                class="bg-green-100 w-10 h-10 sm:w-12 sm:h-12 flex justify-center items-center rounded-lg shrink-0"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 640"
                   fill="none"
-                  class="w-10 h-10"
+                  class="w-8 h-8 sm:w-10 sm:h-10 shrink-0"
                 >
                   <path
                     fill="#00a76d"
@@ -70,26 +78,27 @@
                 </svg>
               </div>
 
-              <h2 class="text-lg font-bold text-[#00a76d]">
+              <h2 class="text-base sm:text-lg font-bold text-[#00a76d] leading-tight">
                 {{ 'CHOOSE_SETEC.GRADUATE_ATTRIBUTES.SUBTITLE2' | translate }}
               </h2>
             </div>
 
-            <p class="text-lg text-gray-600">
+            <p class="text-sm sm:text-lg text-gray-600">
               {{ 'CHOOSE_SETEC.GRADUATE_ATTRIBUTES.SUB_DESC2' | translate }}
             </p>
           </div>
 
-          <div class="rounded-2xl shadow-lg p-4 ">
-            <div class="flex items-center gap-3 mb-3">
+          <!-- CARD 3 -->
+          <div class="rounded-2xl shadow-lg p-4">
+            <div class="flex items-start gap-3 mb-3">
               <div
-                class="bg-green-100 w-12 h-12 flex justify-center items-center rounded-lg shrink-0"
+                class="bg-green-100 w-10 h-10 sm:w-12 sm:h-12 flex justify-center items-center rounded-lg shrink-0"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 640"
                   fill="none"
-                  class="w-10 h-10 shrink-0"
+                  class="w-8 h-8 sm:w-10 sm:h-10 shrink-0"
                 >
                   <path
                     fill="#00a76d"
@@ -98,26 +107,27 @@
                 </svg>
               </div>
 
-              <h2 class="text-lg font-bold text-[#00a76d]">
+              <h2 class="text-base sm:text-lg font-bold text-[#00a76d] leading-tight">
                 {{ 'CHOOSE_SETEC.GRADUATE_ATTRIBUTES.SUBTITLE3' | translate }}
               </h2>
             </div>
 
-            <p class="text-lg text-gray-600">
+            <p class="text-sm sm:text-lg text-gray-600">
               {{ 'CHOOSE_SETEC.GRADUATE_ATTRIBUTES.SUB_DESC3' | translate }}
             </p>
           </div>
 
+          <!-- CARD 4 -->
           <div class="rounded-2xl shadow-lg p-4">
-            <div class="flex items-center gap-3 mb-3">
+            <div class="flex items-start gap-3 mb-3">
               <div
-                class="bg-green-100 w-12 h-12 flex justify-center items-center rounded-lg shrink-0"
+                class="bg-green-100 w-10 h-10 sm:w-12 sm:h-12 flex justify-center items-center rounded-lg shrink-0"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 640"
                   fill="none"
-                  class="w-10 h-10 shrink-0"
+                  class="w-8 h-8 sm:w-10 sm:h-10 shrink-0"
                 >
                   <path
                     fill="#00a76d"
@@ -126,12 +136,12 @@
                 </svg>
               </div>
 
-              <h2 class="text-lg font-bold text-[#00a76d]">
+              <h2 class="text-base sm:text-lg font-bold text-[#00a76d] leading-tight">
                 {{ 'CHOOSE_SETEC.GRADUATE_ATTRIBUTES.SUBTITLE4' | translate }}
               </h2>
             </div>
 
-            <p class="text-lg text-gray-600">
+            <p class="text-sm sm:text-lg text-gray-600">
               {{ 'CHOOSE_SETEC.GRADUATE_ATTRIBUTES.SUB_DESC4' | translate }}
             </p>
           </div>
