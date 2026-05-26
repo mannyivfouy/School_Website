@@ -12,6 +12,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class Navbar {
   currentLang: string = localStorage.getItem('lang') || 'en';
+  isMenuOpen: boolean = false;
 
   constructor(private langService: Language) {}
 
@@ -24,4 +25,9 @@ export class Navbar {
     const newLang = this.currentLang === 'en' ? 'kh' : 'en';
     this.changeLang(newLang);
   }
+
+  toggleMenu(){
+    this.isMenuOpen = !this.isMenuOpen
+  }
+
 }

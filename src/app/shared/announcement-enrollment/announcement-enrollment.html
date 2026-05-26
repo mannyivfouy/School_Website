@@ -1,22 +1,22 @@
 <div
   *ngIf="showAlert || isClosing"
-  class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
+  class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-3 overflow-y-auto"
   [ngClass]="overlayClass"
 >
-  <!-- MODAL CARD -->
+  <!-- RESPONSIVE SHORTER MODAL -->
   <div
-    class="w-[95%] max-w-5xl rounded-2xl overflow-hidden shadow-2xl relative flex"
+    class="w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl relative flex flex-col lg:flex-row"
     [ngClass]="modalClass"
   >
     <!-- CLOSE BUTTON -->
     <button
       (click)="closeAlert()"
-      class="absolute top-4 right-4 z-10 p-2 rounded-xl bg-white shadow hover:bg-gray-100 hover:scale-105 active:scale-95 transition flex items-center justify-center cursor-pointer"
+      class="absolute top-3 right-3 z-20 p-2 rounded-xl bg-white shadow hover:bg-gray-100 hover:scale-105 active:scale-95 transition flex items-center justify-center cursor-pointer"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
+        width="18"
+        height="18"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -30,44 +30,52 @@
     </button>
 
     <!-- LEFT SIDE -->
-    <div class="w-2/5 bg-[#1b7f4a] text-white p-10 flex flex-col items-center justify-center">
-      <img src="assets/images/logo.png" alt="SETEC Logo" width="150" class="mb-6" />
+    <div
+      class="w-full lg:w-[38%] bg-[#1b7f4a] text-white p-6 lg:p-8 flex flex-col items-center justify-center text-center"
+    >
+      <!-- REMARK: RESPONSIVE IMAGE SIZE -->
+      <img src="assets/images/logo.png" alt="SETEC Logo" class="w-24 lg:w-32 mb-4" />
 
-      <!-- TITLE -->
-      <h1 class="text-3xl font-bold tracking-wide">SETEC INSTITUTE</h1>
+      <!-- REMARK: SMALLER TITLE -->
+      <h1 class="text-2xl lg:text-3xl font-bold tracking-wide">SETEC INSTITUTE</h1>
 
-      <!-- SUBTITLE -->
-      <p class="text-center text-gray-100 text-md leading-relaxed">
-        Being Your Education With Us, <br />
-        End With Job Opportunity
+      <!-- REMARK: SMALLER SUBTITLE -->
+      <p class="text-gray-100 text-sm leading-relaxed mt-3">
+        <i>
+          Being Your Education With Us,
+          <br />
+          End With Job Opportunity
+        </i>
       </p>
     </div>
 
     <!-- RIGHT SIDE -->
-    <div class="w-3/5 bg-white text-gray-700 p-10">
-      <!-- TITLE -->
-      <h2 class="text-3xl font-bold mb-5">
+    <div class="w-full lg:w-[62%] bg-white text-gray-700 p-6 lg:p-8">
+      <!-- REMARK: SMALLER TITLE -->
+      <h2 class="text-2xl lg:text-3xl font-bold mb-4 wrap-break-word">
         {{ announcement.title }}
       </h2>
 
-      <!-- DESCRIPTION -->
-      <p class="text-gray-600 text-lg leading-relaxed mb-8">
+      <!-- REMARK: SMALLER DESCRIPTION -->
+      <p class="text-gray-600 text-base leading-relaxed mb-6 text-left lg:text-justify">
         {{ announcement.description }}
       </p>
 
-      <hr class="border-gray-600 mb-8" />
+      <hr class="border-gray-300 mb-6" />
 
-      <!-- IMPORTANT DATES -->
-      <h3 class="text-lg font-semibold text-gray-700 uppercase mb-4">Important Dates</h3>
+      <!-- REMARK: SMALLER SECTION TITLE -->
+      <h3 class="text-base font-semibold text-gray-700 uppercase mb-4">Important Dates</h3>
 
-      <div class="space-y-6">
+      <!-- REMARK: SMALLER GAP -->
+      <div class="space-y-4">
         <!-- ITEM -->
-        <div class="flex items-center gap-5">
-          <div class="bg-green-100 w-12 h-12 flex justify-center items-center rounded-lg shrink-0">
+        <div class="flex items-start gap-4">
+          <!-- REMARK: SMALLER ICON BOX -->
+          <div class="bg-green-100 w-10 h-10 flex justify-center items-center rounded-lg shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 640 640"
-              class="w-8 h-8 text-[#00a76d]"
+              class="w-5 h-5 text-[#00a76d]"
               fill="currentColor"
             >
               <path
@@ -79,17 +87,44 @@
           <div>
             <p class="text-sm text-gray-400">Applications Open</p>
 
-            <p class="text-lg font-semibold">{{ announcement.startDate | date: 'dd MMM yyyy' }}</p>
+            <!-- REMARK: SMALLER DATE TEXT -->
+            <p class="text-base font-semibold ">
+              {{ announcement.startDate | date: 'dd MMM yyyy' }}
+            </p>
           </div>
         </div>
 
         <!-- ITEM -->
-        <div class="flex items-center gap-5">
-          <div class="bg-green-100 w-12 h-12 flex justify-center items-center rounded-lg shrink-0">
+        <div class="flex items-start gap-4">
+          <div class="bg-green-100 w-10 h-10 flex justify-center items-center rounded-lg shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 640 640"
-              class="w-8 h-8 text-[#00a76d] shrink-0"
+              class="w-5 h-5 text-[#00a76d]"
+              fill="currentColor"
+            >
+              <path
+                d="M224 96C224 78.3 209.7 64 192 64C174.3 64 160 78.3 160 96L160 128L128 128C92.7 128 64 156.7 64 192L64 240L512 240L512 192C512 156.7 483.3 128 448 128L416 128L416 96C416 78.3 401.7 64 384 64C366.3 64 352 78.3 352 96L352 128L224 128L224 96zM64 480C64 515.3 92.7 544 128 544L289.4 544C278.2 519.6 272 492.6 272 464C272 385.3 319.4 317.6 387.1 288L64 288L64 480zM464 608C543.5 608 608 543.5 608 464C608 384.5 543.5 320 464 320C384.5 320 320 384.5 320 464C320 543.5 384.5 608 464 608z"
+              />
+            </svg>
+          </div>
+
+          <div>
+            <p class="text-sm text-gray-400">Applications Close</p>
+
+            <p class="text-base font-semibold">
+              {{ announcement.endDate | date: 'dd MMM yyyy' }}
+            </p>
+          </div>
+        </div>
+
+        <!-- ITEM -->
+        <div class="flex items-start gap-4">
+          <div class="bg-green-100 w-10 h-10 flex justify-center items-center rounded-lg shrink-0">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              class="w-5 h-5 text-green-600"
               fill="currentColor"
             >
               <path
@@ -99,31 +134,9 @@
           </div>
 
           <div>
-            <p class="text-sm text-gray-400">Applications Close</p>
-
-            <p class="text-lg font-semibold">{{ announcement.endDate | date: 'dd MMM yyyy' }}</p>
-          </div>
-        </div>
-
-        <!-- ITEM -->
-        <div class="flex items-center gap-5">
-          <div class="bg-green-100 w-12 h-12 flex justify-center items-center rounded-lg shrink-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 640 640"
-              class="w-8 h-8 text-[#00a76d] shrink-0"
-              fill="currentColor"
-            >
-              <path
-                d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z"
-              />
-            </svg>
-          </div>
-
-          <div>
             <p class="text-sm text-gray-400">Classes Commence</p>
 
-            <p class="text-lg font-semibold">
+            <p class="text-base font-semibold">
               {{ announcement.classes_commence | date: 'dd MMM yyyy' }}
             </p>
           </div>
