@@ -74,14 +74,12 @@ export class Academics {
   }
 
   private lockScroll(): void {
-    this.document.body.style.overflowY = 'scroll';
-    this.document.body.style.position = 'fixed';
-    this.document.body.style.width = '100%';
+    this.document.documentElement.style.overflow = 'hidden';
+    this.document.body.style.overflow = 'hidden';
   }
 
   private unlockScroll(): void {
-    this.document.body.style.overflowY = '';
-    this.document.body.style.position = '';
-    this.document.body.style.width = '';
+    this.document.documentElement.style.overflow = '';
+    this.document.body.style.overflow = '';
   }
 }
