@@ -1,6 +1,6 @@
 export const ANNOUNCEMENT_CONFIG = {
   isActive: true,
-  startDate: '2026-05-22',
+  startDate: '2026-08-03',
   endDate: '2026-07-31',
   classes_commence: '2026-12-01',
   academic_year: 'Academic Year 2026-2027',
