@@ -1,0 +1,142 @@
+<div class="w-full pt-6 sm:pt-8 space-y-6 animate__animated animate__fadeIn">
+  <div class="text-center px-4">
+    <h1 class="text-2xl sm:text-3xl font-bold text-gray-700">
+      {{ 'STRUCTURE.TITLE' | translate }}
+    </h1>
+  </div>
+
+  <div class="w-full overflow-x-auto chart-canvas py-8 px-4 select-none">
+    <div class="flex flex-col items-center" style="min-width: max-content">
+      <ng-container *ngFor="let root of roots">
+        <ng-container *ngTemplateOutlet="nodeTemplate; context: { $implicit: root, depth: 0 }">
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     NODE TEMPLATE
+     Renders:
+       1. A horizontal sibling row (siblings left + this node + siblings right)
+          with a connecting horizontal line between them
+       2. A vertical stem down from THIS node only
+       3. Children below
+     ============================================================ -->
+<ng-template #nodeTemplate let-node let-depth="depth">
+  <div class="flex flex-col items-center">
+    <!-- ── Row: siblings + this node ── -->
+    <div class="relative flex flex-row items-center justify-center">
+      <!-- Horizontal connector line spanning all siblings + node (JS-measured) -->
+      <ng-container *ngIf="node.siblings?.length">
+        <div
+          #hbarHost
+          data-hbar-host
+          class="absolute h-0.5 bg-slate-300 pointer-events-none"
+          style="top: 50%; transform: translateY(-50%); left: 0; width: 0; z-index: 0"
+        ></div>
+      </ng-container>
+
+      <!-- Left sibling(s) -->
+      <ng-container *ngIf="node.siblings?.length">
+        <ng-container *ngFor="let sibTitle of node.siblings">
+          <ng-container *ngIf="getNode(sibTitle) as sib">
+            <div data-hbar-col class="flex flex-col items-center px-3 z-10">
+              <div class="org-box" [ngClass]="[sib.color, 'depth-' + depth]">
+                {{ sib.title }}
+              </div>
+            </div>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+
+      <!-- This node -->
+      <div
+        [attr.data-hbar-col]="node.siblings?.length ? '' : null"
+        class="flex flex-col items-center px-3 z-10"
+      >
+        <div class="org-box" [ngClass]="[node.color, 'depth-' + depth]">
+          {{ node.title }}
+        </div>
+      </div>
+    </div>
+    <!-- ── end sibling row ── -->
+
+    <!-- Children -->
+    <ng-container *ngIf="node.children?.length">
+      <ng-container
+        *ngTemplateOutlet="
+          childRowTemplate;
+          context: { $implicit: node.children, depth: depth + 1 }
+        "
+      >
+      </ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="node.childGroups?.length">
+      <ng-container *ngFor="let group of node.childGroups">
+        <ng-container
+          *ngTemplateOutlet="childRowTemplate; context: { $implicit: group, depth: depth + 1 }"
+        >
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+</ng-template>
+
+<!-- ============================================================
+     CHILD ROW TEMPLATE
+     ============================================================ -->
+<ng-template #childRowTemplate let-titles let-depth="depth">
+  <!-- Vertical stem from parent -->
+  <div class="w-0.5 bg-slate-300" [class]="depth <= 2 ? 'h-6' : 'h-4'"></div>
+
+  <!-- Single child: straight drop -->
+  <ng-container *ngIf="titles.length === 1; else multiCol">
+    <ng-container *ngIf="getNode(titles[0]) as child">
+      <ng-container *ngTemplateOutlet="nodeTemplate; context: { $implicit: child, depth: depth }">
+      </ng-container>
+    </ng-container>
+  </ng-container>
+
+  <!-- Multiple children -->
+  <ng-template #multiCol>
+    <!-- COLUMN layout when all children are leaves (no grandchildren) -->
+    <ng-container *ngIf="!hasDeepChildren(titles); else rowLayout">
+      <div class="flex flex-col items-center">
+        <ng-container *ngFor="let title of titles; let last = last">
+          <ng-container *ngIf="getNode(title) as child">
+            <ng-container
+              *ngTemplateOutlet="nodeTemplate; context: { $implicit: child, depth: depth }"
+            >
+            </ng-container>
+            <div *ngIf="!last" class="w-0.5 h-1.5 bg-slate-300"></div>
+          </ng-container>
+        </ng-container>
+      </div>
+    </ng-container>
+
+    <!-- ROW layout when at least one child has its own children -->
+    <ng-template #rowLayout>
+      <div
+        #hbarHost
+        data-hbar-host
+        class="relative flex flex-row items-start justify-center"
+        [style.gap]="depth <= 2 ? '12px' : '6px'"
+      >
+        <div data-hbar class="absolute top-0 h-0.5 bg-slate-300" style="left: 0; width: 0"></div>
+
+        <div *ngFor="let title of titles" data-hbar-col class="flex flex-col items-center">
+          <div class="w-0.5 bg-slate-300" [class]="depth <= 2 ? 'h-5' : 'h-3'"></div>
+
+          <ng-container *ngIf="getNode(title) as child">
+            <ng-container
+              *ngTemplateOutlet="nodeTemplate; context: { $implicit: child, depth: depth }"
+            >
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+    </ng-template>
+  </ng-template>
+</ng-template>

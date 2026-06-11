@@ -9,10 +9,6 @@
       <!-- ========================= -->
       <div routerLink="/layout/home" class="logo cursor-pointer">
         <div class="flex items-center">
-          <!-- REMARK:
-               RESPONSIVE LOGO SIZE
-               width="70" -> class
-          -->
           <img
             src="assets/images/logo.png"
             alt="logo"
@@ -20,9 +16,6 @@
           />
 
           <div class="flex flex-col justify-center">
-            <!-- REMARK:
-                 RESPONSIVE TEXT
-            -->
             <div class="text-lg sm:text-xl lg:text-2xl font-bold">
               {{ 'NAV.INSTITUTE' | translate }}
             </div>
@@ -38,13 +31,6 @@
         </div>
       </div>
 
-      <!-- ========================= -->
-      <!-- DESKTOP MENU -->
-      <!-- ========================= -->
-      <!-- REMARK:
-           hidden on mobile
-           flex on medium+
-      -->
       <ul
         class="hidden md:flex space-x-4 lg:space-x-6 text-gray-700 font-medium text-base lg:text-lg"
       >
@@ -85,7 +71,7 @@
         </li>
 
         <li>
-          <a href="" class="nav-link" routerLinkActive="active">
+          <a routerLink="/structure" class="nav-link" routerLinkActive="active">
             {{ 'NAV.STRUCTURE' | translate }}
           </a>
         </li>
@@ -182,7 +168,7 @@
         </li>
 
         <li>
-          <a href="" class="nav-link" (click)="isMenuOpen = false">
+          <a routerLink="/structure" class="nav-link" (click)="isMenuOpen = false">
             {{ 'NAV.STRUCTURE' | translate }}
           </a>
         </li>
