@@ -1,3 +1,4 @@
+<!-- structure.html — static org chart, paste this entire file -->
 <div class="w-full pt-6 sm:pt-8 space-y-6 animate__animated animate__fadeIn">
   <div class="text-center px-4">
     <h1 class="text-2xl sm:text-3xl font-bold text-gray-700">
@@ -5,138 +6,136 @@
     </h1>
   </div>
 
-  <div class="w-full overflow-x-auto chart-canvas py-8 px-4 select-none">
-    <div class="flex flex-col items-center" style="min-width: max-content">
-      <ng-container *ngFor="let root of roots">
-        <ng-container *ngTemplateOutlet="nodeTemplate; context: { $implicit: root, depth: 0 }">
-        </ng-container>
-      </ng-container>
+  <div
+    class="w-full overflow-x-auto py-8 px-4 select-none"
+    style="-webkit-overflow-scrolling: touch"
+  >
+    <div class="oc-wrap" style="min-width: 900px; padding-bottom: 16px">
+      <!-- ══════════════════════════════════════════
+           L1: ក្រុមប្រឹក្សាភិបាល
+           ══════════════════════════════════════════ -->
+      <div class="org-box bg-cyan-400 d0">ក្រុមប្រឹក្សាភិបាល</div>
+      <div class="oc-stem oc-stem-md"></div>
+
+      <!-- ══════════════════════════════════════════
+           L2: ក្រុមប្រឹក្សាវិន័យ ── នាយក ── មហាវិទ្យាល័យ
+           ══════════════════════════════════════════ -->
+      <div class="oc-flanked">
+        <div class="org-box bg-blue-400 d1">ក្រុមប្រឹក្សាវិន័យ</div>
+        <div class="oc-hline-wide"></div>
+        <div class="oc-center-col">
+          <div class="org-box bg-orange-400 d1">នាយក</div>
+          <div class="oc-stem oc-stem-md"></div>
+        </div>
+        <div class="oc-hline-wide"></div>
+        <div class="org-box bg-blue-400 d1">មហាវិទ្យាល័យ</div>
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           L3: នាយករង
+           ══════════════════════════════════════════ -->
+      <div class="org-box bg-sky-300 d1">នាយករង</div>
+      <div class="oc-stem oc-stem-md"></div>
+
+      <!-- ══════════════════════════════════════════
+           L3b: side-children of នាយករង
+           ══════════════════════════════════════════ -->
+      <div class="oc-flanked">
+        <div class="org-box bg-rose-300 d2">ការិយាល័យបរិញ្ញាបត្រជាន់ខ្ពស់</div>
+        <div class="oc-hline"></div>
+        <div class="oc-tjunction"></div>
+        <div class="oc-hline"></div>
+        <div class="org-box bg-rose-300 d2">ការិយាល័យធានាគុណភាពផ្ទៃក្នុង</div>
+      </div>
+      <div class="oc-stem oc-stem-md"></div>
+
+      <!-- ══════════════════════════════════════════
+           L4 branch: 5 offices
+           ══════════════════════════════════════════ -->
+      <div class="oc-branch">
+        <!-- ── Office 1: រដ្ឋបាល និងបុគ្គលិក ── -->
+        <div class="oc-branch-col">
+          <div class="oc-branch-top oc-branch-top--first"></div>
+          <div class="org-box bg-blue-400 d2">ការិយាល័យរដ្ឋបាល និងបុគ្គលិក</div>
+          <div class="oc-stem oc-stem-sm"></div>
+          <div class="oc-leaves">
+            <div class="org-box bg-purple-300 d3">
+              ផ្នែកបុគ្គលិក លិខិតរដ្ឋបាល និងបញ្ជាក់ការសិក្សា
+            </div>
+            <div class="oc-leaf-gap"></div>
+            <div class="org-box bg-purple-300 d3">ពិគ្រោះយោបល់ និងចុះឈ្មោះ</div>
+            <div class="oc-leaf-gap"></div>
+            <div class="org-box bg-purple-300 d3">ផ្នែកសុខភាព</div>
+            <div class="oc-leaf-gap"></div>
+            <div class="org-box bg-purple-300 d3">អនាម័យនិងសន្តិសុខ</div>
+          </div>
+        </div>
+
+        <!-- ── Office 2: គណនេយ្យ និងហិរញ្ញវត្ថុ ── -->
+        <div class="oc-branch-col">
+          <div class="oc-branch-top oc-branch-top--mid"></div>
+          <div class="org-box bg-blue-400 d2">ការិយាល័យគណនេយ្យ និងហិរញ្ញវត្ថុ</div>
+          <div class="oc-stem oc-stem-sm"></div>
+          <div class="oc-leaves">
+            <div class="org-box bg-orange-300 d3">គណនេយ្យ</div>
+            <div class="oc-leaf-gap"></div>
+            <div class="org-box bg-orange-300 d3">បេឡា</div>
+            <div class="oc-leaf-gap"></div>
+            <div class="org-box bg-orange-300 d3">កសុភារ</div>
+            <div class="oc-leaf-gap"></div>
+            <div class="org-box bg-orange-300 d3">ឃ្លាំង</div>
+          </div>
+        </div>
+
+        <!-- ── Office 3 (center): សិក្សា ── -->
+        <div class="oc-branch-col">
+          <div class="oc-branch-top oc-branch-top--solo"></div>
+          <div class="org-box bg-blue-400 d2">ការិយាល័យ សិក្សា និងកិច្ចការនិស្សិត</div>
+          <div class="oc-stem oc-stem-sm"></div>
+          <div class="oc-leaves">
+            <div class="org-box bg-green-300 d3">ផ្នែករៀបចំ និងអភិវឌ្ឍកម្មវិធីសិក្សា</div>
+            <div class="oc-leaf-gap"></div>
+            <div class="org-box bg-green-300 d3">គ្រប់គ្រងការប្រឡង</div>
+            <div class="oc-leaf-gap"></div>
+            <div class="org-box bg-green-300 d3">សេវានិស្សិត និងកម្មសិក្សា</div>
+            <div class="oc-leaf-gap"></div>
+            <div class="org-box bg-green-300 d3">គ្រប់គ្រងជំនាន់</div>
+            <div class="oc-leaf-gap"></div>
+            <div class="org-box bg-green-300 d3">បណ្ណាល័យ</div>
+          </div>
+        </div>
+
+        <!-- ── Office 4: IT ── -->
+        <div class="oc-branch-col">
+          <div class="oc-branch-top oc-branch-top--mid"></div>
+          <div class="org-box bg-blue-400 d2">ការិយាល័យ IT</div>
+          <div class="oc-stem oc-stem-sm"></div>
+          <div class="oc-leaves">
+            <div class="org-box bg-pink-300 d3">គ្រប់គ្រងប្រព័ន្ធ Database & Network</div>
+            <div class="oc-leaf-gap"></div>
+            <div class="org-box bg-pink-300 d3">ថែទាំ Computer</div>
+          </div>
+        </div>
+
+        <!-- ── Office 5: ដេប៉ាតឺម៉ង់ ── -->
+        <div class="oc-branch-col">
+          <div class="oc-branch-top oc-branch-top--last"></div>
+          <div class="org-box bg-blue-400 d2">ដេប៉ាតឺម៉ង់ថ្នាក់ឆ្នាំសិក្សាមូលដ្ឋាន</div>
+          <div class="oc-stem oc-stem-sm"></div>
+          <div class="oc-leaves">
+            <div class="org-box bg-teal-300 d3">
+              ផ្នែកអភិវឌ្ឍកម្មវិធីសិក្សា ថ្នាក់ឆ្នាំសិក្សាមូលដ្ឋាន
+            </div>
+            <div class="oc-leaf-gap"></div>
+            <div class="org-box bg-teal-300 d3">
+              ផ្នែកទំនាក់ទំនង និងសេវានិស្សិត ថ្នាក់ឆ្នាំសិក្សាមូលដ្ឋាន
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end oc-branch -->
     </div>
+    <!-- end oc-wrap -->
   </div>
 </div>
-
-<!-- ============================================================
-     NODE TEMPLATE
-     Renders:
-       1. A horizontal sibling row (siblings left + this node + siblings right)
-          with a connecting horizontal line between them
-       2. A vertical stem down from THIS node only
-       3. Children below
-     ============================================================ -->
-<ng-template #nodeTemplate let-node let-depth="depth">
-  <div class="flex flex-col items-center">
-    <!-- ── Row: siblings + this node ── -->
-    <div class="relative flex flex-row items-center justify-center">
-      <!-- Horizontal connector line spanning all siblings + node (JS-measured) -->
-      <ng-container *ngIf="node.siblings?.length">
-        <div
-          #hbarHost
-          data-hbar-host
-          class="absolute h-0.5 bg-slate-300 pointer-events-none"
-          style="top: 50%; transform: translateY(-50%); left: 0; width: 0; z-index: 0"
-        ></div>
-      </ng-container>
-
-      <!-- Left sibling(s) -->
-      <ng-container *ngIf="node.siblings?.length">
-        <ng-container *ngFor="let sibTitle of node.siblings">
-          <ng-container *ngIf="getNode(sibTitle) as sib">
-            <div data-hbar-col class="flex flex-col items-center px-3 z-10">
-              <div class="org-box" [ngClass]="[sib.color, 'depth-' + depth]">
-                {{ sib.title }}
-              </div>
-            </div>
-          </ng-container>
-        </ng-container>
-      </ng-container>
-
-      <!-- This node -->
-      <div
-        [attr.data-hbar-col]="node.siblings?.length ? '' : null"
-        class="flex flex-col items-center px-3 z-10"
-      >
-        <div class="org-box" [ngClass]="[node.color, 'depth-' + depth]">
-          {{ node.title }}
-        </div>
-      </div>
-    </div>
-    <!-- ── end sibling row ── -->
-
-    <!-- Children -->
-    <ng-container *ngIf="node.children?.length">
-      <ng-container
-        *ngTemplateOutlet="
-          childRowTemplate;
-          context: { $implicit: node.children, depth: depth + 1 }
-        "
-      >
-      </ng-container>
-    </ng-container>
-
-    <ng-container *ngIf="node.childGroups?.length">
-      <ng-container *ngFor="let group of node.childGroups">
-        <ng-container
-          *ngTemplateOutlet="childRowTemplate; context: { $implicit: group, depth: depth + 1 }"
-        >
-        </ng-container>
-      </ng-container>
-    </ng-container>
-  </div>
-</ng-template>
-
-<!-- ============================================================
-     CHILD ROW TEMPLATE
-     ============================================================ -->
-<ng-template #childRowTemplate let-titles let-depth="depth">
-  <!-- Vertical stem from parent -->
-  <div class="w-0.5 bg-slate-300" [class]="depth <= 2 ? 'h-6' : 'h-4'"></div>
-
-  <!-- Single child: straight drop -->
-  <ng-container *ngIf="titles.length === 1; else multiCol">
-    <ng-container *ngIf="getNode(titles[0]) as child">
-      <ng-container *ngTemplateOutlet="nodeTemplate; context: { $implicit: child, depth: depth }">
-      </ng-container>
-    </ng-container>
-  </ng-container>
-
-  <!-- Multiple children -->
-  <ng-template #multiCol>
-    <!-- COLUMN layout when all children are leaves (no grandchildren) -->
-    <ng-container *ngIf="!hasDeepChildren(titles); else rowLayout">
-      <div class="flex flex-col items-center">
-        <ng-container *ngFor="let title of titles; let last = last">
-          <ng-container *ngIf="getNode(title) as child">
-            <ng-container
-              *ngTemplateOutlet="nodeTemplate; context: { $implicit: child, depth: depth }"
-            >
-            </ng-container>
-            <div *ngIf="!last" class="w-0.5 h-1.5 bg-slate-300"></div>
-          </ng-container>
-        </ng-container>
-      </div>
-    </ng-container>
-
-    <!-- ROW layout when at least one child has its own children -->
-    <ng-template #rowLayout>
-      <div
-        #hbarHost
-        data-hbar-host
-        class="relative flex flex-row items-start justify-center"
-        [style.gap]="depth <= 2 ? '12px' : '6px'"
-      >
-        <div data-hbar class="absolute top-0 h-0.5 bg-slate-300" style="left: 0; width: 0"></div>
-
-        <div *ngFor="let title of titles" data-hbar-col class="flex flex-col items-center">
-          <div class="w-0.5 bg-slate-300" [class]="depth <= 2 ? 'h-5' : 'h-3'"></div>
-
-          <ng-container *ngIf="getNode(title) as child">
-            <ng-container
-              *ngTemplateOutlet="nodeTemplate; context: { $implicit: child, depth: depth }"
-            >
-            </ng-container>
-          </ng-container>
-        </div>
-      </div>
-    </ng-template>
-  </ng-template>
-</ng-template>
+  
